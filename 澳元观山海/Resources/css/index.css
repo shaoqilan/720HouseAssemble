@@ -77,8 +77,6 @@ iframe {
         display: block;
         width: 100%;
     }
-
-
 .selectqwcon {
     position: absolute;
     z-index: 999;
@@ -89,25 +87,73 @@ iframe {
     right: 30px;
 }
 .selectqw {
-    border-bottom: solid 1px #c2634f;
-    border-radius: 30px;
-    color: #fff;
-    display: block;
-    padding: 1px;
-    padding-left: 8px;
-    padding-right: 8px;
-    margin-top: 8px;
-    background-color: rgba(49, 44, 44, 0.83);
+    height: 33px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
 }
 
 .selectqwend {
-    border-bottom: solid 1px #c2634f;
-    border-radius: 30px;
-    color: #fff;
-    display: block;
-    padding: 1px;
-    padding-left: 8px;
-    padding-right: 8px;
-    background-color: #1c93fa;
-    margin-top: 8px;
+    height: 33px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+}
+.selectqwend#tab4right-item-1{
+    background-image:url('../images/img/QW/交通配套@2x.png');
+}
+.selectqwend#tab4right-item-2{
+    background-image:url('../images/img/QW/商业商务@2x.png');
+}
+.selectqwend#tab4right-item-3{
+    background-image:url('../images/img/QW/旅游休闲@2x.png');
+}
+.selectqwend#tab4right-item-4{
+    background-image:url('../images/img/QW/医疗教育@2x.png');
+}
+.selectqw#tab4right-item-1{
+    background-image:url('../images/img/QW/交通配套-未激活@2x.png');
+}
+.selectqw#tab4right-item-2{
+    background-image:url('../images/img/QW/商业商务-未激活@2x.png');
+}
+.selectqw#tab4right-item-3{
+    background-image:url('../images/img/QW/旅游休闲-未激活@2x.png');
+}
+.selectqw#tab4right-item-4{
+    background-image:url('../images/img/QW/医疗教育-未激活@2x.png');
+}
+.mask{
+    width:100%;position:absolute;z-index:-1;height:100%;overflow:hidden;
+    overflow: auto;
+}
+.showMask .mask{
+    z-index: 1000;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.showMask .mask>img{
+    position: absolute;
+    top:50%;
+    width: 100%;
+    height: auto;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin-top: 0;
+}
+.mask>img{
+    width:100%;margin-top:-50px;
+}
+.tab4right{
+    position: absolute;
+    width: 100px;
+    top: 75px;
+    right: 20px;
 }

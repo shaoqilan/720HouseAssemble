@@ -52,9 +52,9 @@
                 </div>
             </div>
             <div id="tab4" class="weui-tab__bd-item">
-                <div style="overflow:hidden;height: auto;">
-                    <div style="width:100%;position:absolute;z-index:-1;height:100%;overflow:hidden;">
-                        <img style="width:100%;margin-top:-50px;" src="Resources/images/img/QW/bg.png" />
+                <div id="maskHand" style="overflow:hidden;height: auto;">
+                    <div class="mask">
+                        <img src="Resources/images/img/QW/bg.png" />
                     </div>
                     <div id="quwei" style="overflow:hidden;" class="swiper-container">
                         <div class="swiper-wrapper">
@@ -145,6 +145,9 @@
                 $(this).parent().find("div").attr("class", "selectqw");
                 $(this).attr("class", "selectqwend");
                 //切换
+            });
+            $("#maskHand").on("click",function(e){
+                $(this).toggleClass("showMask");
             });
         });
         function CutRoom(obj, url) {

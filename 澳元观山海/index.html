@@ -50,9 +50,9 @@
                 </div>
             </div>
             <div id="tab4" class="weui-tab__bd-item">
-                <div style="overflow:hidden;height: auto;">
-                    <div style="width:100%;position:absolute;z-index:-1;height:100%;overflow:hidden;">
-                        <img style="width:100%;margin-top:-50px;" src="Resources/images/img/QW/QW4.jpg" />
+                <div id="maskHand" style="overflow:hidden;height: auto;">
+                    <div class="mask">
+                        <img src="Resources/images/img/QW/bg.png" />
                     </div>
                     <div id="quwei" style="overflow:hidden;" class="swiper-container">
                         <div class="swiper-wrapper">
@@ -71,24 +71,25 @@
                         </div>
                     </div>
                 </div>
-                <div style="height: 100%;margin-top: -1px;width: 100%;background-color: #3e3e3e;">
+                <div style="height: 100%;margin-top: -1px;width: 100%;background-color: #3e3e3e;position: relative;">
                     <div style="width: 240px;">
-                        <div style="text-align: center;padding-top:20px;">
+                        <div style="padding-left: 20px;   text-align: left; padding-top: 30px; margin-bottom: 8px;">
                             <img style="width: 100px;" src="Resources/images/img/QW/区位介绍@2x.png" />
                         </div>
-                        <div style="width: 95%;padding-left: 20px;font-size: 15px;color:#fff;">
-                            
+                        <div style="width: 95%; padding-left: 20px; font-size: 14px; color: #c7c7c7; line-height: 2;">
+                            奥园·观山海商务广场位于珠海市横琴大桥旁，是国家横琴保税区资产； 港珠澳大桥洪湾桥头出口，南侧 横琴新区，东侧 十字门 商务区。项目共7栋楼组成，一栋130米超高层酒店式办公，五栋百米高层塔楼，以及一栋小高层退台式地景建筑。项目打造为27万方都市综合体，集跨境电商产业、展销 、商务办公、酒店式公寓、港式街区式商业于一体
+
                         </div>
                     </div>
-                    <div style="width:100px; margin-right: 13px; float: right; padding-top: 70px; margin-top: -426px;">
-                        <div seltype="qw0" tagindex="1" style="display:none;" class="selectqwend">全部配套</div>
-                        <div seltype="qw1" tagindex="2" class="selectqw" style="background-image:url('Resources/images/img/QW/交通配套@2x.png');">
+                    <div class="tab4right">
+                        <div seltype="qw0" tagindex="1" style="display:none;" class="tab4right-item selectqwend">全部配套</div>
+                        <div seltype="qw1" tagindex="2" id="tab4right-item-1" class="selectqw" >
                         </div>
-                        <div seltype="qw2" tagindex="3" class="selectqw" style="background-image:url('Resources/images/img/QW/旅游休闲@2x.png')">
+                        <div seltype="qw2" tagindex="3" id="tab4right-item-2" class="selectqw" >
                         </div>
-                        <div seltype="qw3" tagindex="4" class="selectqw" style="background-image:url('Resources/images/img/QW/商业商务@2x.png')">
+                        <div seltype="qw3" tagindex="4" id="tab4right-item-3" class="selectqw" >
                         </div>
-                        <div seltype="qw4" tagindex="5" class="selectqw" style="background-image:url('Resources/images/img/QW/医疗教育@2x.png')">
+                        <div seltype="qw4" tagindex="5" id="tab4right-item-4" class="selectqw" >
                         </div>
                     </div>
                 </div>
@@ -141,6 +142,9 @@
                 $(this).parent().find("div").attr("class", "selectqw");
                 $(this).attr("class", "selectqwend");
                 //切换
+            });
+            $("#maskHand").on("click",function(e){
+                $(this).toggleClass("showMask");
             });
         });
         

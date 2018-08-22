@@ -101,3 +101,31 @@ iframe {
     background-repeat: no-repeat;
     margin-bottom: 16px;
 }
+.mask{
+    width:100%;position:absolute;z-index:-1;height:100%;overflow:hidden;
+    overflow: auto;
+}
+.showMask .mask{
+    z-index: 1000;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.showMask .mask>img{
+    position: absolute;
+    top:50%;
+    width: 100%;
+    height: auto;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin-top: 0;
+}
+.mask>img{
+    width:100%;margin-top:-50px;
+}
