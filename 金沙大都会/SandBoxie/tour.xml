@@ -1,0 +1,265 @@
+﻿<krpano version="1.19" title="Virtual Tour">
+  <include url="skin/vtourskin.xml" />
+  <!--文字显示必须的-->
+  <style name="TopTagTextMenGroup" url="%SWFPATH%/plugins/textfield.swf" background="false" css="border-bottom: solid 1px #c2634f;border-radius:30px;color:#fff;display:block;padding:2px;padding-left:10px;padding-right: 10px;background-color: rgba(49, 44, 44, 0.83);" enabled="true" />
+  <!--标签显示的样式-->
+  <style name="TopTagTextLable" background="true" roundedge="12" backgroundalpha="0.6" backgroundcolor="0x000000" shadow="1" shadowrange="1" shadowcolor="0xff0000" fontsize="8" css="color:#fff;padding:2px;padding-left:10px;padding-right: 10px; " enabled="false" zoom="true" blendmode="layer" />
+  <!--标签的线-->
+  <style name="LableLine" background="true" backgroundcolor="0xFFFFFF" width="1" css="height: 50px;" enabled="false" ox="0" oy="40" zoom="true" />
+  <!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+  <skin_settings maps="false" maps_type="google" maps_bing_api_key="" maps_google_api_key="" maps_zoombuttons="false" gyro="true" webvr="true" webvr_gyro_keeplookingdirection="false" webvr_prev_next_hotspots="true" littleplanetintro="true" title="false" thumbs="true" thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160" thumbs_opened="false" thumbs_text="false" thumbs_dragging="true" thumbs_onhoverscrolling="false" thumbs_scrollbuttons="false" thumbs_scrollindicator="false" thumbs_loop="false" tooltips_buttons="false" tooltips_thumbs="false" tooltips_hotspots="false" tooltips_mapspots="false" deeplinking="false" loadscene_flags="MERGE" loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)" loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)" loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)" loadingtext="加载中..." layout_width="100%" layout_maxwidth="814" controlbar_width="-24" controlbar_height="40" controlbar_offset="20" controlbar_offset_closed="-40" controlbar_overlap.no-fractionalscaling="10" controlbar_overlap.fractionalscaling="0" design_skin_images="vtourskin.png" design_bgcolor="0x000000" design_bgalpha="0" design_bgborder="0" design_bgroundedge="1" design_bgshadow="0 0 0 0x000000 0" design_thumbborder_bgborder="3 0xFFFFFF 1.0" design_thumbborder_padding="2" design_thumbborder_bgroundedge="0" design_text_css="color:#FFFFFF; font-family:Arial;" design_text_shadow="1" />
+  <!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+  <!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+  <!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+  <!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+  <!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+  <!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+  <!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+  <!-- startup action - load the first scene -->
+  <action name="startup" autorun="onstart">
+    if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+    loadscene(get(startscene), null, MERGE);
+    if(startactions !== null, startactions() );
+    skin_hideskin('instant');
+  </action>
+  <!--场景信息-->
+  <scene name="scene_p1" title="p1" onstart="SceneStart()" havevrimage="true" thumburl="panos/p1.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="-233.555" vlookat="29.207" fovtype="MFOV" fov="125.317" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview url="panos/p1.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+      <level tiledimagewidth="2624" tiledimageheight="2624">
+        <cube url="panos/p1.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1280" tiledimageheight="1280">
+        <cube url="panos/p1.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="640" tiledimageheight="640">
+        <cube url="panos/p1.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image if="webvr.isenabled">
+      <cube url="panos/p1.tiles/vr/pano_%s.jpg" />
+    </image>
+    <!--标记-->
+    <hotspot name="spot1" group="jiaotong" type="text" style="TopTagTextLable" ath="114.510" atv="40.870" html="沙凤一路" />
+    <hotspot name="line1" group="jiaotong" type="text" style="LableLine" ath="114.510" atv="40.870" />
+    
+    <hotspot name="spot2" group="jiaotong" type="text" style="TopTagTextLable" ath="56.129" atv="3.134" html="环洲三路" />
+    <hotspot name="line2" group="jiaotong" type="text" style="LableLine" ath="56.129" atv="3.134" />
+    
+    <hotspot name="spot3" group="jiaotong" type="text" style="TopTagTextLable" ath="114.711" atv="16.962" html="环洲二路" />
+    <hotspot name="line3" group="jiaotong" type="text" style="LableLine" ath="114.711" atv="16.962" />
+    
+    <hotspot name="spot4" group="jiaotong" type="text" style="TopTagTextLable" ath="96.785" atv="1.624" html="金沙洲路" />
+    <hotspot name="line4" group="jiaotong" type="text" style="LableLine" ath="96.785" atv="1.624" />
+    
+    <hotspot name="spot5" group="facility" type="text" style="TopTagTextLable" ath="109.671" atv="-2.609" html="广附金沙洲实验学校" />
+    <hotspot name="line5" group="facility" type="text" style="LableLine" ath="109.671" atv="-2.609" />
+    
+    <hotspot name="spot6" group="jiaotong" type="text" style="TopTagTextLable" ath="142.517" atv="6.362" html="环洲一路" />
+    <hotspot name="line6" group="jiaotong" type="text" style="LableLine" ath="142.517" atv="6.362" />
+    
+    <hotspot name="spot7" group="facility" type="text" style="TopTagTextLable" ath="125.940" atv="0.119" html="金沙洲滨江公园" />
+    <hotspot name="line7" group="facility" type="text" style="LableLine" ath="125.940" atv="0.119" />
+    
+    <hotspot name="spot8" group="jiaotong" type="text" style="TopTagTextLable" ath="137.099" atv="1.258" html="彩滨中路" />
+    <hotspot name="line8" group="jiaotong" type="text" style="LableLine" ath="137.099" atv="1.258" />
+    
+    <hotspot name="spot9" group="jiaotong" type="text" style="TopTagTextLable" ath="153.231" atv="3.973" html="沙凤一路" />
+    <hotspot name="line9" group="jiaotong" type="text" style="LableLine" ath="153.231" atv="3.973" />
+    
+    <hotspot name="spot10" group="jiaotong" type="text" style="TopTagTextLable" ath="154.359" atv="0.686" html="金沙洲大桥" />
+    <hotspot name="line10" group="jiaotong" type="text" style="LableLine" ath="154.359" atv="0.686" />
+    
+    <hotspot name="spot11" group="jiaotong" type="text" style="TopTagTextLable" ath="-160.645" atv="7.871" html="彩滨南路" />
+    <hotspot name="line11" group="jiaotong" type="text" style="LableLine" ath="-160.645" atv="7.871" />
+    
+    <hotspot name="spot12" group="facility" type="text" style="TopTagTextLable" ath="-88.435" atv="19.445" html="广州市白云中学" />
+    <hotspot name="line12" group="facility" type="text" style="LableLine" ath="-88.435" atv="19.445" />
+    <!--标记菜单-->
+    <layer name="txt1" group="all" onclick="ShowAll()" style="TopTagTextMenGroup" html="全部" x="10" y="60" align="lefttop" />
+    <layer name="txt2" group="jiaotong" onclick="ShowJiaotong()" style="TopTagTextMenGroup" html="交通路网" x="10" y="88" align="lefttop" />
+    <layer name="txt3" group="facility" onclick="ShowFacility()" style="TopTagTextMenGroup" html="休闲教育" x="10" y="115" align="lefttop" />
+    <!--锚点-->
+    <hotspot name="spot25" url="skin/p2.png" style="skin_hotspotstyle" ath="106.883" atv="3.746" linkedscene="scene_p2" />
+    <hotspot name="spot26" url="skin/p4.png" style="skin_hotspotstyle" ath="122.181" atv="19.848" linkedscene="scene_p4" />
+    <hotspot name="spot27" url="skin/p3.png" style="skin_hotspotstyle" ath="134.071" atv="0.555" linkedscene="scene_p3" />
+  </scene>
+  <scene name="scene_p2" title="p2" onstart="" havevrimage="true" thumburl="panos/p2.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="7.120" vlookat="20.923" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview url="panos/p2.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+      <level tiledimagewidth="2624" tiledimageheight="2624">
+        <cube url="panos/p2.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1280" tiledimageheight="1280">
+        <cube url="panos/p2.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="640" tiledimageheight="640">
+        <cube url="panos/p2.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image if="webvr.isenabled">
+      <cube url="panos/p2.tiles/vr/pano_%s.jpg" />
+    </image>
+    <hotspot name="spot28" url="skin/p3.png" style="skin_hotspotstyle" ath="1.322" atv="-0.151" linkedscene="scene_p3" />
+    <hotspot name="spot29" url="skin/p1.png" style="skin_hotspotstyle" ath="45.271" atv="3.724" linkedscene="scene_p1" />
+  </scene>                 
+  <scene name="scene_p3" title="p3" onstart="" havevrimage="true" thumburl="panos/p3.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="9.424" vlookat="88.126" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview url="panos/p3.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+      <level tiledimagewidth="2624" tiledimageheight="2624">
+        <cube url="panos/p3.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1280" tiledimageheight="1280">
+        <cube url="panos/p3.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="640" tiledimageheight="640">
+        <cube url="panos/p3.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image if="webvr.isenabled">
+      <cube url="panos/p3.tiles/vr/pano_%s.jpg" />
+    </image>
+    <hotspot name="spot30" url="skin/p5.png" style="skin_hotspotstyle" ath="1.271" atv="53.519" linkedscene="scene_p5" />
+    <hotspot name="spot31" url="skin/p1.png" style="skin_hotspotstyle" ath="139.610" atv="5.918" linkedscene="scene_p1" />
+    <hotspot name="spot32" url="skin/p2.png" style="skin_hotspotstyle" ath="-114.972" atv="12.043" linkedscene="scene_p2" />
+  </scene>                 
+  <scene name="scene_p4" title="p4" onstart="" havevrimage="true" thumburl="panos/p4.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview url="panos/p4.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+      <level tiledimagewidth="2624" tiledimageheight="2624">
+        <cube url="panos/p4.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1280" tiledimageheight="1280">
+        <cube url="panos/p4.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="640" tiledimageheight="640">
+        <cube url="panos/p4.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image if="webvr.isenabled">
+      <cube url="panos/p4.tiles/vr/pano_%s.jpg" />
+    </image>
+    <hotspot name="spot35" url="skin/p8.png" style="skin_hotspotstyle" ath="58.471" atv="0.271" linkedscene="scene_p8" />
+    <hotspot name="spot36" url="skin/p7.png" style="skin_hotspotstyle" ath="-38.023" atv="-0.432" linkedscene="scene_p7" />
+    <hotspot name="spot37" url="skin/p2.png" style="skin_hotspotstyle" ath="-171.646" atv="5.518" linkedscene="scene_p2" />
+  </scene>
+  <scene name="scene_p5" title="p5" onstart="" havevrimage="true" thumburl="panos/p5.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview url="panos/p5.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+      <level tiledimagewidth="2624" tiledimageheight="2624">
+        <cube url="panos/p5.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1280" tiledimageheight="1280">
+        <cube url="panos/p5.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="640" tiledimageheight="640">
+        <cube url="panos/p5.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image if="webvr.isenabled">
+      <cube url="panos/p5.tiles/vr/pano_%s.jpg" />
+    </image>
+    <hotspot name="spot38" url="skin/p6.png" style="skin_hotspotstyle" ath="53.773" atv="-5.713" linkedscene="scene_p6" />
+    <hotspot name="spot39" url="skin/p8.png" style="skin_hotspotstyle" ath="-32.200" atv="-7.070" linkedscene="scene_p8" />
+    <hotspot name="spot45" url="skin/p1.png" style="skin_hotspotstyle" ath="-179.174" atv="2.729" linkedscene="scene_p1" />
+  </scene>
+  <scene name="scene_p6" title="p6" onstart="" havevrimage="true" thumburl="panos/p6.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="551.596" vlookat="11.724" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview url="panos/p6.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+      <level tiledimagewidth="2624" tiledimageheight="2624">
+        <cube url="panos/p6.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1280" tiledimageheight="1280">
+        <cube url="panos/p6.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="640" tiledimageheight="640">
+        <cube url="panos/p6.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image if="webvr.isenabled">
+      <cube url="panos/p6.tiles/vr/pano_%s.jpg" />
+    </image>
+    <hotspot name="spot40" url="skin/p7.png" style="skin_hotspotstyle" ath="23.217" atv="-4.267" linkedscene="scene_p7" />
+  </scene>
+  <scene name="scene_p7" title="p7" onstart="" havevrimage="true" thumburl="panos/p7.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="-52.024" vlookat="-1.888" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview url="panos/p7.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+      <level tiledimagewidth="2624" tiledimageheight="2624">
+        <cube url="panos/p7.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1280" tiledimageheight="1280">
+        <cube url="panos/p7.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="640" tiledimageheight="640">
+        <cube url="panos/p7.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image if="webvr.isenabled">
+      <cube url="panos/p7.tiles/vr/pano_%s.jpg" />
+    </image>
+    <hotspot name="spot41" url="skin/p5.png" style="skin_hotspotstyle" ath="-169.548" atv="-6.206" linkedscene="scene_p5" />
+  </scene>
+  <scene name="scene_p8" title="p8" onstart="" havevrimage="true" thumburl="panos/p8.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="-263.011" vlookat="6.209" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview url="panos/p8.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+      <level tiledimagewidth="2624" tiledimageheight="2624">
+        <cube url="panos/p8.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1280" tiledimageheight="1280">
+        <cube url="panos/p8.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="640" tiledimageheight="640">
+        <cube url="panos/p8.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+
+    <image if="webvr.isenabled">
+      <cube url="panos/p8.tiles/vr/pano_%s.jpg" />
+    </image>
+    <hotspot name="spot42" url="skin/p5.png" style="skin_hotspotstyle" ath="178.623" atv="-4.619" linkedscene="scene_p5" />
+    <hotspot name="spot43" url="skin/p7.png" style="skin_hotspotstyle" ath="-40.640" atv="-7.295" linkedscene="scene_p7" />
+    <hotspot name="spot44" url="skin/p4.png" style="skin_hotspotstyle" ath="-0.187" atv="-4.130" linkedscene="scene_p4" />
+  </scene>
+  <!--场景信息-->
+
+
+  <action name="SceneStart">
+    ShowAll();
+  </action>
+  <action name="ShowAll">
+    set(layer[txt1].css,'border-bottom: solid 1px #c2634f;border-radius:30px;color:#fff;display:block;padding:2px;padding-left:10px;padding-right: 10px;background-color: #1c93fa;');
+    set(layer[txt2].css,'border-bottom: solid 1px #c2634f;border-radius:30px;color:#fff;display:block;padding:2px;padding-left:10px;padding-right: 10px;background-color: rgba(49, 44, 44, 0.83);');
+    set(layer[txt3].css,'border-bottom: solid 1px #c2634f;border-radius:30px;color:#fff;display:block;padding:2px;padding-left:10px;padding-right: 10px;background-color: rgba(49, 44, 44, 0.83);');
+    for(set(i,0), i LT hotspot.count, inc(i),
+    if(hotspot[get(i)].style === 'TopTagTextLable', set(hotspot[get(i)].visible, true));
+    if(hotspot[get(i)].style === 'LableLine', set(hotspot[get(i)].visible, true));
+    );
+  </action>
+  <action name="ShowJiaotong">
+    set(layer[txt2].css,'border-bottom: solid 1px #c2634f;border-radius:30px;color:#fff;display:block;padding:2px;padding-left:10px;padding-right: 10px;background-color: #1c93fa;');
+    set(layer[txt1].css,'border-bottom: solid 1px #c2634f;border-radius:30px;color:#fff;display:block;padding:2px;padding-left:10px;padding-right: 10px;background-color: rgba(49, 44, 44, 0.83);');
+    set(layer[txt3].css,'border-bottom: solid 1px #c2634f;border-radius:30px;color:#fff;display:block;padding:2px;padding-left:10px;padding-right: 10px;background-color: rgba(49, 44, 44, 0.83);');
+    for(set(i,0), i LT hotspot.count, inc(i),
+    if(hotspot[get(i)].group === 'jiaotong', set(hotspot[get(i)].visible, true),set(hotspot[get(i)].visible, false));
+    );
+  </action>
+  <action name="ShowFacility">
+    set(layer[txt3].css,'border-bottom: solid 1px #c2634f;border-radius:30px;color:#fff;display:block;padding:2px;padding-left:10px;padding-right: 10px;background-color: #1c93fa;');
+    set(layer[txt2].css,'border-bottom: solid 1px #c2634f;border-radius:30px;color:#fff;display:block;padding:2px;padding-left:10px;padding-right: 10px;background-color: rgba(49, 44, 44, 0.83);');
+    set(layer[txt1].css,'border-bottom: solid 1px #c2634f;border-radius:30px;color:#fff;display:block;padding:2px;padding-left:10px;padding-right: 10px;background-color: rgba(49, 44, 44, 0.83);');
+    for(set(i,0), i LT hotspot.count, inc(i),
+    if(hotspot[get(i)].group === 'facility', set(hotspot[get(i)].visible, true),set(hotspot[get(i)].visible, false));
+    );
+  </action>
+</krpano>

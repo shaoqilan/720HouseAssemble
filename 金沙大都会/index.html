@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>720</title>
+    <link href="Resources/jqweui/weui.min.css" rel="stylesheet" />
+    <link href="Resources/jqweui/jquery-weui.min.css" rel="stylesheet">
+    <link href="Resources/jqweui/demos.css" rel="stylesheet" />
+    <link href="Resources/css/index.css" rel="stylesheet" />
+</head>
+<body style="overflow: hidden;">
+    <div class="weui-tab">
+        <div class="weui-tab__bd">
+            <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+                <div class="diviframe">
+                    <iframe src="SandBoxie/index.html"></iframe>
+                </div>
+            </div>
+            <div id="tab2" class="weui-tab__bd-item">
+                <div style="overflow:hidden;height:100%;">
+                    <img style="width:100%;position:absolute;z-index:-1;height:100%;" src="Resources/images/img/bg.png" />
+                    <div id="housetype" style="overflow:hidden;" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="Resources/images/img/6-A-1.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Resources/images/img/6-A-2.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Resources/images/img/6-A-3.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Resources/images/img/6-D-1.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Resources/images/img/6-D-2.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab3" class="weui-tab__bd-item">
+                <div class="selectcon">
+                    <div onclick="CutRoom(this,'Room/B/index.html')" class="selectroomend">A户型</div>
+                    <div onclick="CutRoom(this,'Room/D/index.html')" class="selectroom">D户型</div>
+                </div>
+                <div class="diviframe">
+                    <iframe id="room" src="Room/B/index.html"></iframe>
+                </div>
+            </div>
+            <div id="tab4" class="weui-tab__bd-item">
+                <div style="overflow:hidden;height: auto;">
+                    <div style="width:100%;position:absolute;z-index:-1;height:100%;overflow:hidden;">
+                        <img style="width:100%;margin-top:-50px;" src="Resources/images/img/QW/bg.png" />
+                    </div>
+                    <div id="quwei" style="overflow:hidden;" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div tagindex="0" class="swiper-slide">
+                                <img style="margin-top:-50px;" src="Resources/images/img/QW/bg.png" />
+                            </div>
+                            <div tagindex="1" class="swiper-slide">
+                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW1.png" />
+                            </div>
+                            <div tagindex="2" class="swiper-slide">
+                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW2.png" />
+                            </div>
+                            <div tagindex="3" class="swiper-slide">
+                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW3.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background-image:url('Resources/images/img/QW/蓝色底色@2x.png'); height: 100%;margin-top: -1px;width: 100%;">
+                    <div style="width: 240px;">
+                        <div style="text-align: center;padding-top:20px;">
+                            <img style="width: 100px;" src="Resources/images/img/QW/项目区位@2x.png" />
+                        </div>
+                        <div style="width: 95%;padding-left: 20px;font-size: 15px;color:#fff;">
+                            金沙大都汇位于金沙洲大桥西南侧，雄踞六号线沙贝地铁站上盖，出站即达。
+                            项目由央企保利和国企城投携手，打造广州西部金沙洲板块高端综合体。项目独享一线珠江江景，绿心公园、寻峰山与园林景观尽收眼底。
+                            项目占地7万方，总建筑面积约40万方。
+                            作为大都汇系列的第四座标杆项目，本案采用保利全新5.0全生命周期系统，独具科学性的收纳空间、超100%以上的实用率，生活办公零秒切换。
+                            明火明厨、带入户花园，小区配备全龄段泳池，以及超6万方购物广场，满足一站式生活所需。
+                        </div>
+                    </div>
+                    <div style="width:100px; margin-right: 13px; float: right; padding-top: 70px; margin-top: -426px;">
+                        <div seltype="qw0" tagindex="1" style="display:none;" class="selectqwend">全部配套</div>
+                        <div seltype="qw1" tagindex="2" class="selectqw" style="background-image:url('Resources/images/img/QW/地铁交通@2x.png');">
+                        </div>
+                        <div seltype="qw2" tagindex="3" class="selectqw" style="background-image:url('Resources/images/img/QW/交通路网@2x.png')">
+                        </div>
+                        <div seltype="qw3" tagindex="4" class="selectqw" style="background-image:url('Resources/images/img/QW/商业休闲@2x.png')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weui-tabbar">
+            <a href="#tab1" class="weui-tabbar__item weui-bar__item--on">
+                <div class="weui-tabbar__icon menindex "></div>
+                <p class="weui-tabbar__label">首页</p>
+            </a>
+            <a href="#tab2" class="weui-tabbar__item">
+                <div class="weui-tabbar__icon menhousetype"></div>
+                <p class="weui-tabbar__label">户型图</p>
+            </a>
+            <a href="#tab3" class="weui-tabbar__item">
+                <div class="weui-tabbar__icon menprototyperoom"></div>
+                <p class="weui-tabbar__label">样板间</p>
+            </a>
+            <a href="#tab4" class="weui-tabbar__item">
+                <div class="weui-tabbar__icon menzonebit"></div>
+                <p class="weui-tabbar__label">区位</p>
+            </a>
+        </div>
+    </div>
+    <script src="Resources/jqweui/jquery-2.1.4.js"></script>
+    <script src="Resources/jqweui/jquery-weui.min.js"></script>
+    <script src="Resources/jqweui/swiper.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#housetype").swiper({
+                loop: true,
+                autoplay: 3000,
+                observer: true,
+                observeParents: true
+            });
+            var quwei = new Swiper('#quwei', {
+                loop: true,
+                autoplay: false,
+                observer: true,
+                observeParents: true,
+                onTransitionEnd: function (swiper) {
+                    var index = $("#quwei .swiper-slide-active").attr("tagindex");
+                    $("div[seltype=\"qw" + index + "\"]").parent().find("div").attr("class", "selectqw");
+                    $("div[seltype=\"qw" + index + "\"]").attr("class", "selectqwend");
+                }
+            });
+            $("div[seltype]").click(function () {
+                var index = parseInt($(this).attr("tagindex"));
+                quwei.slideTo(index, 1000, false);
+                $(this).parent().find("div").attr("class", "selectqw");
+                $(this).attr("class", "selectqwend");
+                //切换
+            });
+        });
+        function CutRoom(obj, url) {
+            $(obj).parent().find("div").attr("class", "selectroom");
+            $(obj).attr("class", "selectroomend");
+            $("#room").attr("src", url);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>720</title>
+    <link href="Resources/jqweui/weui.min.css" rel="stylesheet" />
+    <link href="Resources/jqweui/jquery-weui.min.css" rel="stylesheet">
+    <link href="Resources/jqweui/demos.css" rel="stylesheet" />
+    <link href="Resources/css/index.css" rel="stylesheet" />
+    <style type="text/css">
+        .swiper-button-disabled{
+            display:none;
+        }
+    </style>
+</head>
+<body style="overflow: hidden;">
+    <div class="weui-tab">
+        <div class="weui-tab__bd">
+            <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+                <div class="diviframe">
+                    <iframe src="SandBoxie/index.html"></iframe>
+                </div>
+            </div>
+            <div id="tab2" class="weui-tab__bd-item">
+                <div style="overflow:hidden;height:100%;">
+                    <div style="background-image:url('Resources/images/img/XMJS/bg.png');height: 100%;background-size: 100%;    padding-top: 50px;">
+                        <div style="background-image:url('Resources/images/img/XMJS/logo.png');height: 77px;width: 60%;background-size: 100%;background-repeat: no-repeat;margin: 0px auto;">
+
+                        </div>
+                        <div style="width: 90%; background-size: 100%; background-repeat: no-repeat; margin: 0px auto; position: fixed; bottom: 60px; left: 0px; right: 0px;">
+                            <img style="width:100%;" src="Resources/images/img/XMJS/text.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab3" class="weui-tab__bd-item">
+                <div id="housetype" style="overflow:hidden;" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="Resources/images/img/HXFB/F.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Resources/images/img/HXFB/D.png" />
+                        </div>
+                    </div>
+                    <div class="swiper-button-next" style="background-image:url('Resources//images/img/HXFB/右@2x.png');width: 30px;height: 30px;margin-top: -123px;"></div>
+                    <div class="swiper-button-prev" style="background-image:url('Resources//images/img/HXFB/左@2x.png');width: 30px;height: 30px;margin-top: -123px;"></div>
+                </div>
+            </div>
+            <div id="tab4" class="weui-tab__bd-item">
+                <div style="overflow:hidden;height: auto;">
+                    <div style="width:100%;position:absolute;z-index:-1;height:100%;overflow:hidden;">
+                        <img style="width:100%;margin-top:-50px;" src="Resources/images/img/QW/QW4.jpg" />
+                    </div>
+                    <div id="quwei" style="overflow:hidden;" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div tagindex="1" class="swiper-slide">
+                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW1.png" />
+                            </div>
+                            <div tagindex="2" class="swiper-slide">
+                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW2.png" />
+                            </div>
+                            <div tagindex="3" class="swiper-slide">
+                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW3.png" />
+                            </div>
+                            <div tagindex="4" class="swiper-slide">
+                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW4.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="height: 100%;margin-top: -1px;width: 100%;background-color: #3e3e3e;">
+                    <div style="width: 240px;">
+                        <div style="text-align: center;padding-top:20px;">
+                            <img style="width: 100px;" src="Resources/images/img/QW/区位介绍@2x.png" />
+                        </div>
+                        <div style="width: 95%;padding-left: 20px;font-size: 15px;color:#fff;">
+                            
+                        </div>
+                    </div>
+                    <div style="width:100px; margin-right: 13px; float: right; padding-top: 70px; margin-top: -426px;">
+                        <div seltype="qw0" tagindex="1" style="display:none;" class="selectqwend">全部配套</div>
+                        <div seltype="qw1" tagindex="2" class="selectqw" style="background-image:url('Resources/images/img/QW/交通配套@2x.png');">
+                        </div>
+                        <div seltype="qw2" tagindex="3" class="selectqw" style="background-image:url('Resources/images/img/QW/旅游休闲@2x.png')">
+                        </div>
+                        <div seltype="qw3" tagindex="4" class="selectqw" style="background-image:url('Resources/images/img/QW/商业商务@2x.png')">
+                        </div>
+                        <div seltype="qw4" tagindex="5" class="selectqw" style="background-image:url('Resources/images/img/QW/医疗教育@2x.png')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weui-tabbar">
+            <a href="#tab1" class="weui-tabbar__item weui-bar__item--on">
+                <div class="weui-tabbar__icon menindex "></div>
+                <p class="weui-tabbar__label">鸟瞰大场景</p>
+            </a>
+            <a href="#tab2" class="weui-tabbar__item">
+                <div class="weui-tabbar__icon menhousetype"></div>
+                <p class="weui-tabbar__label">项目简介</p>
+            </a>
+            <a href="#tab3" class="weui-tabbar__item">
+                <div class="weui-tabbar__icon menprototyperoom"></div>
+                <p class="weui-tabbar__label">户型分布</p>
+            </a>
+            <a href="#tab4" class="weui-tabbar__item">
+                <div class="weui-tabbar__icon menzonebit"></div>
+                <p class="weui-tabbar__label">区位优势</p>
+            </a>
+        </div>
+    </div>
+    <script src="Resources/jqweui/jquery-2.1.4.js"></script>
+    <script src="Resources/jqweui/jquery-weui.min.js"></script>
+    <script src="Resources/jqweui/swiper.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#housetype").swiper({
+                loop: true,
+                autoplay: 3000,
+                observer: true,
+                observeParents: true
+            });
+            var quwei = new Swiper('#quwei', {
+                loop: true,
+                autoplay: false,
+                observer: true,
+                observeParents: true,
+                onTransitionEnd: function (swiper) {
+                    var index = $("#quwei .swiper-slide-active").attr("tagindex");
+                    $("div[seltype=\"qw" + index + "\"]").parent().find("div").attr("class", "selectqw");
+                    $("div[seltype=\"qw" + index + "\"]").attr("class", "selectqwend");
+                }
+            });
+            $("div[seltype]").click(function () {
+                var index = parseInt($(this).attr("tagindex"));
+                quwei.slideTo(index, 1000, false);
+                $(this).parent().find("div").attr("class", "selectqw");
+                $(this).attr("class", "selectqwend");
+                //切换
+            });
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<style>
+		@-ms-viewport { width: device-width; }
+		@media only screen and (min-device-width: 800px) { html { overflow:hidden; } }
+		html { height:100%; }
+		body { height:100%; overflow: hidden; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF; background-color:#000000; }
+		a{ color:#AAAAAA; text-decoration:underline; }
+		a:hover{ color:#FFFFFF; text-decoration:underline; }
+	</style>
+</head>
+<body>
+
+<script src="tour.js"></script>
+
+<div id="title" style="width:100%; height:20px; padding:5px; font-size:16px;"><b>全景编辑指南> </span>// 1. 设置为启动视角 / 2. 添加热点 / 3. 移动热点 / 4. 删除热点 / 5. 编辑XML / 6.保存XML</span></div>
+<div id="pano" style="width:100%; height:95%;">
+	<noscript><table style="width:100%;height:100%;"><tr style="valign:middle;"><td><div style="text-align:center;">异常:<br/><br/>没有权限<br/><br/></div></td></tr></table></noscript>
+	<script>
+		var vars = {};
+		vars["plugin[vtoureditor].url"] = "plugins/vtoureditor.swf";
+		vars["plugin[vtoureditor].keep"] = true;
+		
+		embedpano({swf:"tour.swf", xml:"tour.xml", target:"pano", html5:"never", passQueryParameters:false, vars:vars});
+		
+		function resize()
+		{
+			var th = document.getElementById("title").clientHeight;
+			var ph = (typeof(window.innerHeight) == 'number') ? window.innerHeight : ((document.documentElement && document.documentElement.clientHeight) ? document.documentElement.clientHeight : ((document.body && document.body.clientHeight) ? document.body.clientHeight : 500));
+			
+			document.getElementById("pano").style.height = (ph-th)+"px"
+		}
+		
+		window.onresize = resize;
+		
+		resize();
+	</script>
+</div>
+
+</body>
+</html>
