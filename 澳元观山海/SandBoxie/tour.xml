@@ -1,4 +1,11 @@
 ﻿<krpano version="1.19" title="Virtual Tour">
+  <plugin name="soundinterface"
+        url.flash="%SWFPATH%/plugins/soundinterface.swf"
+        url.html5="%SWFPATH%/plugins/soundinterface.js"
+        rootpath=""
+        preload="true"
+        keep="true"
+        />
   <include url="skin/vtourskin.xml" />
   <!--文字显示必须的-->
   <style name="TopTagTextMenGroup" url="%SWFPATH%/plugins/textfield.swf" background="false" css="border-bottom: solid 1px #c2634f;border-radius:30px;color:#fff;display:block;padding:2px;padding-left:10px;padding-right: 10px;background-color: rgba(49, 44, 44, 0.83);" enabled="true" />
@@ -24,6 +31,7 @@
     loadscene(get(startscene), null, MERGE);
     if(startactions !== null, startactions() );
     skin_hideskin('instant');
+    playsound(bgsnd, 'skin/TheTruthThatYouLeave-Pianoboy.mp3', 0);
   </action>
   <!--场景信息-->
   <scene name="scene_p1" title="p1" onstart="SceneStart()" havevrimage="true" thumburl="panos/p1.tiles/thumb.jpg" lat="" lng="" heading="">
