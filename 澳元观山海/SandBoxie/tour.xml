@@ -1,11 +1,5 @@
 ﻿<krpano version="1.19" title="Virtual Tour">
-  <plugin name="soundinterface"
-        url.flash="%SWFPATH%/plugins/soundinterface.swf"
-        url.html5="%SWFPATH%/plugins/soundinterface.js"
-        rootpath=""
-        preload="true"
-        keep="true"
-        />
+  
   <include url="skin/vtourskin.xml" />
   <!--文字显示必须的-->
   <style name="TopTagTextMenGroup" url="%SWFPATH%/plugins/textfield.swf" background="false" css="border-bottom: solid 1px #c2634f;border-radius:30px;color:#fff;display:block;padding:2px;padding-left:10px;padding-right: 10px;background-color: rgba(49, 44, 44, 0.83);" enabled="true" />
@@ -26,13 +20,20 @@
   <!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
   <!-- <include url="skin/vtourskin_design_black.xml"       /> -->
   <!-- startup action - load the first scene -->
+  <plugin name="soundinterface"
+        url.flash="%SWFPATH%/plugins/soundinterface.swf"
+        url.html5="%SWFPATH%/plugins/soundinterface.js"
+        rootpath="%SWFPATH%/skin"
+        preload="true"
+        keep="true"
+        />
   <action name="startup" autorun="onstart">
     if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
     loadscene(get(startscene), null, MERGE);
-    if(startactions !== null, startactions() );
+    if(startactions !== null, startactions());
     skin_hideskin('instant');
-    playsound(bgsnd, 'skin/TheTruthThatYouLeave-Pianoboy.mp3', 0);
   </action>
+
   <!--场景信息-->
   <scene name="scene_p1" title="p1" onstart="SceneStart()" havevrimage="true" thumburl="panos/p1.tiles/thumb.jpg" lat="" lng="" heading="">
     <view hlookat="-4.241" vlookat="38.651" fovtype="MFOV" fov="97.379" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
@@ -54,37 +55,37 @@
     <!--道路标记-->
     <hotspot name="spot1" group="category1" type="text" style="TopTagTextLable" ath="3.394" atv="32.715" html="澳园-观山海" />
     <hotspot name="line1" group="category1" type="text" style="LableLine" ath="3.394" atv="32.715" />
-    
+
     <hotspot name="spot2" group="category1" type="text" style="TopTagTextLable" ath="-14.935" atv="4.005" html="珠三角环线高速" />
     <hotspot name="line2" group="category1" type="text" style="LableLine" ath="-14.935" atv="4.005" />
-    
+
     <hotspot name="spot3" group="category1" type="text" style="TopTagTextLable" ath="39.257" atv="24.073" html="南湾大道" />
     <hotspot name="line3" group="category1" type="text" style="LableLine" ath="39.257" atv="24.073" />
-    
+
     <hotspot name="spot4" group="category1" type="text" style="TopTagTextLable" ath="13.054" atv="-5.970" html="湾仔口岸" />
     <hotspot name="line4" group="category1" type="text" style="LableLine" ath="13.054" atv="-5.970" />
-    
+
     <hotspot name="spot5" group="category1" type="text" style="TopTagTextLable" ath="28.981" atv="-4.061" html="轻轨十字门站" />
     <hotspot name="line5" group="category1" type="text" style="LableLine" ath="28.981" atv="-4.061" />
-    
+
     <hotspot name="spot6" group="category1" type="text" style="TopTagTextLable" ath="39.680" atv="-5.539" html="港珠澳大桥" />
     <hotspot name="line6" group="category1" type="text" style="LableLine" ath="39.680" atv="-5.539" />
-    
+
     <hotspot name="spot7" group="category1" type="text" style="TopTagTextLable" ath="48.915" atv="-3.036" html="横琴大桥" />
     <hotspot name="line7" group="category1" type="text" style="LableLine" ath="48.915" atv="-3.036" />
-    
+
     <hotspot name="spot8" group="category1" type="text" style="TopTagTextLable" ath="66.661" atv="-5.171" html="横琴口岸" />
     <hotspot name="line8" group="category1" type="text" style="LableLine" ath="66.661" atv="-5.171" />
-    
+
     <hotspot name="spot9" group="category1" type="text" style="TopTagTextLable" ath="92.836" atv="1.548" html="横琴北路" />
     <hotspot name="line9" group="category1" type="text" style="LableLine" ath="92.836" atv="1.548" />
-    
+
     <hotspot name="spot10" group="category1" type="text" style="TopTagTextLable" ath="100.559" atv="4.190" html="马骝洲隧道" />
     <hotspot name="line10" group="category1" type="text" style="LableLine" ath="100.559" atv="4.190" />
-    
+
     <hotspot name="spot11" group="category1" type="text" style="TopTagTextLable" ath="141.865" atv="5.744" html="情侣西路" />
     <hotspot name="line11" group="category1" type="text" style="LableLine" ath="141.865" atv="5.744" />
-    
+
     <hotspot name="spot12" group="category1" type="text" style="TopTagTextLable" ath="-156.923" atv="-1.960" html="横琴二桥" />
     <hotspot name="line12" group="category1" type="text" style="LableLine" ath="-156.923" atv="-1.960" />
 
@@ -109,10 +110,10 @@
 
     <hotspot name="spot19" group="category2" type="text" style="TopTagTextLable" ath="66.682" atv="-1.740" html="马骝洲水道观光" />
     <hotspot name="line19" group="category2" type="text" style="LableLine" ath="66.682" atv="-1.740" />
-    
+
     <hotspot name="spot20" group="category2" type="text" style="TopTagTextLable" ath="91.984" atv="-1.750" html="石博园" />
     <hotspot name="line20" group="category2" type="text" style="LableLine" ath="91.984" atv="-1.750" />
-    
+
     <hotspot name="spot21" group="category2" type="text" style="TopTagTextLable" ath="116.316" atv="-4.330" html="长隆海洋王国" />
     <hotspot name="line21" group="category2" type="text" style="LableLine" ath="116.316" atv="-4.330" />
 
@@ -124,7 +125,7 @@
 
     <hotspot name="spot24" group="category2" type="text" style="TopTagTextLable" ath="161.174" atv="0.479" html="茫洲湿地公园" />
     <hotspot name="line24" group="category2" type="text" style="LableLine" ath="161.174" atv="0.479" />
-    
+
     <!--商业购物-->
     <hotspot name="spot25" group="category3" type="text" style="TopTagTextLable" ath="26.980" atv="2.200" html="珠海跨境工业区" />
     <hotspot name="line25" group="category3" type="text" style="LableLine" ath="26.980" atv="2.200" />
@@ -156,7 +157,7 @@
 
     <hotspot name="spot34" group="category4" type="text" style="TopTagTextLable" ath="116.922" atv="-4.356" html="横琴第一中学" />
     <hotspot name="line34" group="category4" type="text" style="LableLine" ath="116.922" atv="-4.356" />
-    
+
     <!--标记菜单-->
     <layer name="txt1" group="all" onclick="ShowAll(get(name))" style="TopTagTextMenGroup" html="全部配套" x="10" y="60" align="lefttop" />
     <layer name="txt2" group="category1" onclick="ShowCategory(get(group),get(name))" style="TopTagTextMenGroup" html="交通配套" x="10" y="88" align="lefttop" />
@@ -165,10 +166,7 @@
     <layer name="txt5" group="category4" onclick="ShowCategory(get(group),get(name))" style="TopTagTextMenGroup" html="医疗教育" x="10" y="169" align="lefttop" />
 
   </scene>
-
   <!--场景信息-->
-
-
   <action name="SceneStart">
     ShowAll('txt1');
   </action>
