@@ -71,6 +71,7 @@ iframe {
 }
 .swiper-container {
     width: 100%;
+    background: url(../images/img/QW/bg.png) center -50px/100% no-repeat;
 }
 
     .swiper-container img {
@@ -124,7 +125,8 @@ iframe {
     background-image:url('../images/img/QW/医疗教育-未激活@2x.png');
 }
 .mask{
-    width:100%;position:absolute;z-index:-1;height:100%;overflow:hidden;
+    width:100%;position:absolute;z-index:0;height:100%;overflow:hidden;
+    display: none;
     overflow: auto;
 }
 .showMask .mask{
@@ -135,6 +137,7 @@ iframe {
     top: 0;
     height: 100%;
     width: 100%;
+    display: block;
 }
 .showMask .mask>img{
     position: absolute;
