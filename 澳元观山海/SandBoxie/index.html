@@ -44,6 +44,37 @@
             });
         </script>
     </div>
+    <audio id="bgsnd" src="skin/TheTruthThatYouLeavePianoboy.mp3" autoplay="autoplay" loop="loop"></audio>
+    <script src="../Resources/jqweui/jquery-2.1.4.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            alert(55);
+            try {
+                window.parent.Ceshi();
+            } catch (e) {
+                alert(e);
+            }
+        });
+        function audioplay() {
+            $("#bgsnd").get(0).play();
+        }
+        function CheckState() {
+            if ($("#bgsnd").get(0).paused) {
+                //是暂停的播放
+                $("#bgsnd").get(0).play();
+            } else {
+                $("#bgsnd").get(0).pause();
+            }
+            //if (obj.className == "icobutton") {
+            //    //停止
 
+            //    parent.window.audioStop();
+            //} else {
+            //    //播放
+            //    obj.className = "icobutton";
+            //    parent.window.audioPay();
+            //}
+        }
+    </script>
 </body>
 </html>

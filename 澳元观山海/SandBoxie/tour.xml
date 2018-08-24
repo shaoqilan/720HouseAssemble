@@ -91,7 +91,7 @@
     <hotspot name="spot12" group="category1" type="text" style="TopTagTextLable" ath="-156.923" atv="-1.960" html="横琴二桥" />
     <hotspot name="line12" group="category1" type="text" style="LableLine" ath="-156.923" atv="-1.960" />
 
-    <hotspot name="spot13" group="category1" type="text" style="TopTagTextLable" ath="-115.990" atv="-5.849" html="红鹤大桥" />
+    <hotspot name="spot13" group="category1" type="text" style="TopTagTextLable" ath="-115.990" atv="-5.849" html="洪鹤大桥" />
     <hotspot name="line13" group="category1" type="text" style="LableLine" ath="-115.990" atv="-5.849" />
 
     <!--文化休闲-->
@@ -166,7 +166,8 @@
     <layer name="txt3" group="category2" onclick="ShowCategory(get(group),get(name))" style="TopTagTextMenGroup" html="旅游休闲" x="10" y="115" align="lefttop" />
     <layer name="txt4" group="category3" onclick="ShowCategory(get(group),get(name))" style="TopTagTextMenGroup" html="商业商务" x="10" y="142" align="lefttop" />
     <layer name="txt5" group="category4" onclick="ShowCategory(get(group),get(name))" style="TopTagTextMenGroup" html="医疗教育" x="10" y="169" align="lefttop" />
-
+    <!--开关图标-->
+    <layer name="sound"  style="skin_base|skin_glow" crop="64|704|64|64"  align="leftbottom"   ox="3"   x="16"   y="60"  scale="0.5" onclick="js(CheckState(););switch(crop,64|704|40|64,64|704|64|64);switch(alpha,1,0.25);switch(ox,0,-12)"  />
   </scene>
   <!--场景信息-->
   <action name="SceneStart">
