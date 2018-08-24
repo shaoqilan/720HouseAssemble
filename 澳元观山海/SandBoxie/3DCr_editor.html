@@ -33,12 +33,9 @@
 		{
 			var th = document.getElementById("title").clientHeight;
 			var ph = (typeof(window.innerHeight) == 'number') ? window.innerHeight : ((document.documentElement && document.documentElement.clientHeight) ? document.documentElement.clientHeight : ((document.body && document.body.clientHeight) ? document.body.clientHeight : 500));
-			
 			document.getElementById("pano").style.height = (ph-th)+"px"
 		}
-		
 		window.onresize = resize;
-		
 		resize();
 	</script>
 </div>
