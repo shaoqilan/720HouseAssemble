@@ -84,7 +84,6 @@
     <layer name="txt2" group="jiaotong" onclick="ShowJiaotong()" style="TopTagTextMenGroup" html="交通路网" x="10" y="88" align="lefttop" />
     <layer name="txt3" group="facility" onclick="ShowFacility()" style="TopTagTextMenGroup" html="休闲教育" x="10" y="115" align="lefttop" />
     <!--锚点-->
-    <hotspot name="spot25" url="skin/p2.png" style="skin_hotspotstyle" ath="106.883" atv="3.746" linkedscene="scene_p2" />
     <hotspot name="spot26" url="skin/p4.png" style="skin_hotspotstyle" ath="122.181" atv="19.848" linkedscene="scene_p4" />
     <hotspot name="spot27" url="skin/p3.png" style="skin_hotspotstyle" ath="134.071" atv="0.555" linkedscene="scene_p3" />
   </scene>
@@ -127,7 +126,6 @@
     </image>
     <hotspot name="spot30" url="skin/p5.png" style="skin_hotspotstyle" ath="1.271" atv="53.519" linkedscene="scene_p5" />
     <hotspot name="spot31" url="skin/p1.png" style="skin_hotspotstyle" ath="139.610" atv="5.918" linkedscene="scene_p1" />
-    <hotspot name="spot32" url="skin/p2.png" style="skin_hotspotstyle" ath="-114.972" atv="12.043" linkedscene="scene_p2" />
   </scene>                 
   <scene name="scene_p4" title="p4" onstart="" havevrimage="true" thumburl="panos/p4.tiles/thumb.jpg" lat="" lng="" heading="">
     <view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
