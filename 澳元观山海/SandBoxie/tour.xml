@@ -55,7 +55,7 @@
       <cube url="panos/p1.tiles/vr/pano_%s.jpg" />
     </image>
     <!--道路标记-->
-    <hotspot name="spot1" group="category1" type="text" style="TopTagTextLable" ath="3.394" atv="32.715" html="澳园-观山海" />
+    <hotspot name="spot1" group="category1" type="text" style="TopTagTextLable" ath="3.394" atv="32.715" html="奥园-观山海" />
     <hotspot name="line1" group="category1" type="text" style="LableLine" ath="3.394" atv="32.715" />
 
     <hotspot name="spot2" group="category1" type="text" style="TopTagTextLable" ath="-14.935" atv="4.005" html="珠三角环线高速" />
