@@ -71,6 +71,7 @@ iframe {
 }
 .swiper-container {
     width: 100%;
+    background: url(../images/img/QW/bg.png) center -50px/100% no-repeat;
 }
 
     .swiper-container img {
@@ -104,6 +105,7 @@ iframe {
 .mask{
     width:100%;position:absolute;z-index:-1;height:100%;overflow:hidden;
     overflow: auto;
+    display: none
 }
 .showMask .mask{
     z-index: 1000;
@@ -113,6 +115,7 @@ iframe {
     top: 0;
     height: 100%;
     width: 100%;
+    display: block;
 }
 .showMask .mask>img{
     position: absolute;
