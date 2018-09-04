@@ -57,7 +57,8 @@
             display: none;
         }
         .submenu.show{
-            display: block;
+            display: -webkit-flex;
+            display: flex;
         }
         .submenu .submenu-item{
             height: 36px;
@@ -242,7 +243,6 @@
                 $("#menu").find(".submenu").removeClass("show");
             });
             $(".submenu").find(".submenu-item").on("click",function(e){
-                e.stopPropagation();
                 var id = $(this).attr("href");
                 $(".weui-tab__bd-item").removeClass("weui-tab__bd-item--active");
                 $(".weui-tabbar__item").removeClass("weui-bar__item--on");
