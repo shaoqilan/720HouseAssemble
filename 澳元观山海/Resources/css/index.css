@@ -101,27 +101,33 @@ iframe {
     margin-bottom: 5px;
 }
 .selectqwend#tab4right-item-1{
-    background-image:url('../images/img/QW/交通配套@2x.png');
+    background-image:url('../images/img/QW/全部.png');
 }
 .selectqwend#tab4right-item-2{
-    background-image:url('../images/img/QW/商业商务@2x.png');
+    background-image:url('../images/img/QW/交通配套@2x.png');
 }
 .selectqwend#tab4right-item-3{
-    background-image:url('../images/img/QW/旅游休闲@2x.png');
+    background-image:url('../images/img/QW/商业商务@2x.png');
 }
 .selectqwend#tab4right-item-4{
+    background-image:url('../images/img/QW/旅游休闲@2x.png');
+}
+.selectqwend#tab4right-item-5{
     background-image:url('../images/img/QW/医疗教育@2x.png');
 }
 .selectqw#tab4right-item-1{
-    background-image:url('../images/img/QW/交通配套-未激活@2x.png');
+    background-image:url('../images/img/QW/全部-未激活.png');
 }
 .selectqw#tab4right-item-2{
-    background-image:url('../images/img/QW/商业商务-未激活@2x.png');
+    background-image:url('../images/img/QW/交通配套-未激活@2x.png');
 }
 .selectqw#tab4right-item-3{
-    background-image:url('../images/img/QW/旅游休闲-未激活@2x.png');
+    background-image:url('../images/img/QW/商业商务-未激活@2x.png');
 }
 .selectqw#tab4right-item-4{
+    background-image:url('../images/img/QW/旅游休闲-未激活@2x.png');
+}
+.selectqw#tab4right-item-5{
     background-image:url('../images/img/QW/医疗教育-未激活@2x.png');
 }
 .mask{
@@ -155,8 +161,13 @@ iframe {
     width:100%;margin-top:-50px;
 }
 .tab4right{
-    position: absolute;
+    /*position: absolute;
     width: 100px;
     top: 75px;
-    right: 20px;
+    right: 20px;*/
+    position: fixed;
+    width: 100px;
+    top: 10px;
+    z-index: 999;
+    left: 10px;
 }
