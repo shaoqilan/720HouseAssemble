@@ -43,6 +43,34 @@
             color: #FFFFFF;
             background-color: #000000;
         }
+        .weui-tabbar__item{
+            position: relative;
+        }
+        .submenu{
+            position: absolute;
+            bottom: 55px;
+            border-radius: 3px;
+            position: absolute;
+            bottom: 50px;
+            z-index: 100;
+            right: 5px;
+            display: none;
+        }
+        .submenu.show{
+            display: block;
+        }
+        .submenu .submenu-item{
+            height: 36px;
+            width: 102px;
+            display: block;
+            text-decoration: none;
+        }
+        .submenu .submenu-item.submenu-item-xiangmu{
+            background: url("./Resources/images/img/QW/xiangmu.png") center/contain no-repeat;
+        }
+        .submenu .submenu-item.submenu-item-zhanlue{
+            background: url("./Resources/images/img/QW/zhanlue.png") center/contain no-repeat;
+        }
     </style>
 </head>
 <body style="overflow: hidden;">
@@ -88,52 +116,35 @@
                     <div class="swiper-button-prev" style="background-image:url('Resources//images/img/HXFB/左@2x.png');width: 30px;height: 30px;margin-top: -123px;"></div>
                 </div>
             </div>
-            <div id="tab4" class="weui-tab__bd-item">
-                <div id="maskHand" style="overflow:hidden;height: auto;">
-                    <div class="mask">
-                        <img src="Resources/images/img/QW/bg.png" />
-                    </div>
-                    <div id="quwei" style="overflow:hidden;" class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div tagindex="1" class="swiper-slide swiper-slide-active">
-                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW1.png" />
-                            </div>
-                            <div tagindex="2" class="swiper-slide">
-                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW2.png" />
-                            </div>
-                            <div tagindex="3" class="swiper-slide">
-                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW3.png" />
-                            </div>
-                            <div tagindex="4" class="swiper-slide">
-                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW4.png" />
-                            </div>
-                            <div tagindex="5" class="swiper-slide">
-                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW5.png" />
+            <div class="submenu-body">
+                <div id="subtab1" class="weui-tab__bd-item">
+                    <div id="maskHand" style="overflow:hidden;height: auto;">
+                        <div class="mask">
+                            <img src="Resources/images/img/QW/bg.png" />
+                        </div>
+                        <div id="quwei" style="overflow:hidden;" class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div tagindex="1" class="swiper-slide swiper-slide-active">
+                                    <img style="margin-top:-50px;" src="Resources/images/img/QW/QW1.png" />
+                                </div>
+                                <div tagindex="2" class="swiper-slide">
+                                    <img style="margin-top:-50px;" src="Resources/images/img/QW/QW2.png" />
+                                </div>
+                                <div tagindex="3" class="swiper-slide">
+                                    <img style="margin-top:-50px;" src="Resources/images/img/QW/QW3.png" />
+                                </div>
+                                <div tagindex="4" class="swiper-slide">
+                                    <img style="margin-top:-50px;" src="Resources/images/img/QW/QW4.png" />
+                                </div>
+                                <div tagindex="5" class="swiper-slide">
+                                    <img style="margin-top:-50px;" src="Resources/images/img/QW/QW5.png" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div style="margin-top: -1px;width: 100%;background-color: #3e3e3e;position: relative;">
-                    <div style="margin-right: 140px;">
-                        <div style="padding-left: 20px;text-align: left; padding-top: 30px; margin-bottom: 8px;">
-                            <img style="width: 100px;" src="Resources/images/img/QW/区位介绍@2x.png" />
-                        </div>
-                        <div style="width: 95%; padding-left: 20px; font-size: 14px; color: #c7c7c7; line-height: 2;">
-                            奥园·观山海商务广场位于珠海市横琴大桥旁，是国家横琴保税区资产； 港珠澳大桥洪湾桥头出口，南侧 横琴新区，东侧 十字门 商务区。项目共7栋楼组成，一栋130米超高层酒店式办公，五栋百米高层塔楼，以及一栋小高层退台式地景建筑。项目打造为27万方都市综合体，集跨境电商产业、展销 、商务办公、酒店式公寓、港式街区式商业于一体
-                        </div>
-                    </div>
-                    <div class="tab4right">
-                        <div seltype="qw1" tagindex="1" id="tab4right-item-1" class="selectqwend" >
-                        </div>
-                        <div seltype="qw2" tagindex="2" id="tab4right-item-2" class="selectqw" >
-                        </div>
-                        <div seltype="qw3" tagindex="3" id="tab4right-item-3" class="selectqw" >
-                        </div>
-                        <div seltype="qw4" tagindex="4" id="tab4right-item-4" class="selectqw" >
-                        </div>
-                        <div seltype="qw5" tagindex="5" id="tab4right-item-5" class="selectqw">
-                        </div>
-                    </div>
+                <div id="subtab2" class="weui-tab__bd-item">
+                    <img src="Resources/images/img/QW/bg.jpg" style="width: 100%" />
                 </div>
             </div>
         </div>
@@ -150,14 +161,19 @@
                 <div class="weui-tabbar__icon menprototyperoom"></div>
                 <p class="weui-tabbar__label">户型分布</p>
             </a>
-            <a href="#tab4" class="weui-tabbar__item" >
+            <div class="weui-tabbar__item" id="menu">
                 <div class="weui-tabbar__icon menzonebit"></div>
                 <p class="weui-tabbar__label">区位优势</p>
-            </a>
+                <div class="submenu">
+                    <a class="submenu-item submenu-item-xiangmu" href="#subtab1">项目区位</a>
+                    <a class="submenu-item submenu-item-zhanlue" href="#subtab2">战略区位</a>
+                </div>
+            </div>
         </div>
     </div>
     <script src="Resources/jqweui/jquery-2.1.4.js"></script>
     <script src="Resources/jqweui/jquery-weui.min.js"></script>
+    <script src="Resources/jqweui/fastclick.js"></script>
     <script src="Resources/jqweui/swiper.min.js"></script>
     <script type="text/javascript">
         function Ceshi() {
@@ -217,6 +233,25 @@
         //    alert($("#bgsnd").get(0).paused);
         //    return $("#bgsnd").get(0).paused;
         //}
+        $(function(){
+            FastClick.attach(document.body);
+            $("#menu").click(function(){
+                $(this).find(".submenu").toggleClass("show");
+            });
+            $(".weui-tabbar").children("a.weui-tabbar__item").click(function(){
+                $("#menu").find(".submenu").removeClass("show");
+            });
+            $(".submenu").find(".submenu-item").on("click",function(e){
+                e.stopPropagation();
+                var id = $(this).attr("href");
+                $(".weui-tab__bd-item").removeClass("weui-tab__bd-item--active");
+                $(".weui-tabbar__item").removeClass("weui-bar__item--on");
+                $("#menu").addClass("weui-bar__item--on");
+                $(".submenu-body").find(".weui-tab__bd-item").hide();
+                console.log(id);
+                $(id).show();
+            })
+        })
     </script>
 </body>
 </html>
