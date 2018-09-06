@@ -143,6 +143,18 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tab4right">
+                        <div seltype="qw1" tagindex="1" id="tab4right-item-1" class="selectqwend" >
+                        </div>
+                        <div seltype="qw2" tagindex="2" id="tab4right-item-2" class="selectqw" >
+                        </div>
+                        <div seltype="qw3" tagindex="3" id="tab4right-item-3" class="selectqw" >
+                        </div>
+                        <div seltype="qw4" tagindex="4" id="tab4right-item-4" class="selectqw" >
+                        </div>
+                        <div seltype="qw5" tagindex="5" id="tab4right-item-5" class="selectqw">
+                        </div>
+                    </div>
                 </div>
                 <div id="subtab2" class="weui-tab__bd-item">
                     <img src="Resources/images/img/QW/bg.jpg" style="width: 100%" />
@@ -241,14 +253,15 @@
             });
             $(".weui-tabbar").children("a.weui-tabbar__item").click(function(){
                 $("#menu").find(".submenu").removeClass("show");
+                $(".submenu-body").hide();
             });
             $(".submenu").find(".submenu-item").on("click",function(e){
                 var id = $(this).attr("href");
+                $(".submenu-body").show();
                 $(".weui-tab__bd-item").removeClass("weui-tab__bd-item--active");
                 $(".weui-tabbar__item").removeClass("weui-bar__item--on");
                 $("#menu").addClass("weui-bar__item--on");
                 $(".submenu-body").find(".weui-tab__bd-item").hide();
-                console.log(id);
                 $(id).show();
             })
         })

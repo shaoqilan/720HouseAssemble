@@ -2,8 +2,8 @@
     position: relative;
     width: 100%;
     height: 100%;
-    padding-bottom: 53px;
-    bottom: 50px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
 }
 iframe {
     height: 100%;
@@ -170,4 +170,18 @@ iframe {
     top: 10px;
     z-index: 999;
     left: 10px;
+}
+.submenu-body{
+    height: 100%;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    display: none;
+    overflow-y: hidden;
+}
+.submenu-body.show{
+    display: block;
+}
+.submenu-body .weui-tab__bd .weui-tab__bd-item{
+    overflow-y: auto;
+    height: 100%;
 }
