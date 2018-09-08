@@ -83,6 +83,8 @@
     <hotspot name="spot13" group="facility" type="text" style="TopTagTextLable" ath="117.223" atv="5.198" html="城投保利金沙大都汇北地块" />
     <hotspot name="line13" group="facility" type="text" style="LableLine" ath="117.223" atv="5.198" />
     
+    <hotspot name="spot14" group="jiaotong" type="text" style="TopTagTextLable" ath="124.071" atv="8" html="沙贝地铁站" />
+    <hotspot name="line14" group="jiaotong" type="text" style="LableLine" ath="124.071" atv="8" />
     <!--标记菜单-->
     <layer name="txt1" group="all" onclick="ShowAll()" style="TopTagTextMenGroup" html="全部" x="10" y="60" align="lefttop" />
     <layer name="txt2" group="jiaotong" onclick="ShowJiaotong()" style="TopTagTextMenGroup" html="交通路网" x="10" y="88" align="lefttop" />
@@ -109,7 +111,7 @@
       <cube url="panos/p2.tiles/vr/pano_%s.jpg" />
     </image>
     <hotspot name="spot28" url="skin/p3.png" style="skin_hotspotstyle" ath="1.322" atv="-0.151" linkedscene="scene_p3" />
-    <hotspot name="spot29" url="skin/p1.png" style="skin_hotspotstyle" ath="45.271" atv="3.724" linkedscene="scene_p1" />
+    <!--<hotspot name="spot29" url="skin/p1.png" style="skin_hotspotstyle" ath="45.271" atv="3.724" linkedscene="scene_p1" />-->
   </scene>                 
   <scene name="scene_p3" title="p3" onstart="" havevrimage="true" thumburl="panos/p3.tiles/thumb.jpg" lat="" lng="" heading="">
     <view hlookat="9.424" vlookat="88.126" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
@@ -148,6 +150,10 @@
     <image if="webvr.isenabled">
       <cube url="panos/p4.tiles/vr/pano_%s.jpg" />
     </image>
+
+    <hotspot name="spot1" group="jiaotong" type="text" style="TopTagTextLable" ath="10.471" atv="0.271" html="入口水景" />
+    <hotspot name="line1" group="jiaotong" type="text" style="LableLine" ath="10.471" atv="0.271" />
+
     <hotspot name="spot35" url="skin/p8.png" style="skin_hotspotstyle" ath="58.471" atv="0.271" linkedscene="scene_p8" />
     <hotspot name="spot36" url="skin/p7.png" style="skin_hotspotstyle" ath="-38.023" atv="-0.432" linkedscene="scene_p7" />
     <hotspot name="spot37" url="skin/p2.png" style="skin_hotspotstyle" ath="-171.646" atv="5.518" linkedscene="scene_p2" />
