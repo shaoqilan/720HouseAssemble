@@ -86,9 +86,9 @@
     <hotspot name="spot14" group="jiaotong" type="text" style="TopTagTextLable" ath="124.071" atv="8" html="沙贝地铁站" />
     <hotspot name="line14" group="jiaotong" type="text" style="LableLine" ath="124.071" atv="8" />
     <!--标记菜单-->
-    <layer name="txt1" group="all" onclick="ShowAll()" style="TopTagTextMenGroup" html="全部" x="10" y="60" align="lefttop" />
-    <layer name="txt2" group="jiaotong" onclick="ShowJiaotong()" style="TopTagTextMenGroup" html="交通路网" x="10" y="88" align="lefttop" />
-    <layer name="txt3" group="facility" onclick="ShowFacility()" style="TopTagTextMenGroup" html="休闲教育" x="10" y="115" align="lefttop" />
+    <layer name="txt1" group="all" onclick="ShowAll()" style="TopTagTextMenGroup" html="全部" x="10" y="10" align="lefttop" />
+    <layer name="txt2" group="jiaotong" onclick="ShowJiaotong()" style="TopTagTextMenGroup" html="交通路网" x="10" y="38" align="lefttop" />
+    <layer name="txt3" group="facility" onclick="ShowFacility()" style="TopTagTextMenGroup" html="休闲教育" x="10" y="65" align="lefttop" />
     <!--锚点-->
     <hotspot name="spot26" url="skin/p4.png" style="skin_hotspotstyle" ath="122.181" atv="19.848" linkedscene="scene_p4" />
     <hotspot name="spot27" url="skin/p3.png" style="skin_hotspotstyle" ath="134.071" atv="0.555" linkedscene="scene_p3" />

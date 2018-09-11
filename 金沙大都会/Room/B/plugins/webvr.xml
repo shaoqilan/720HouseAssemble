@@ -222,7 +222,7 @@
 
 	<layer name="webvr_exitbutton" keep="true" vr="true"
 	       style="webvr_button_style"
-	       html="Exit VR"
+	       html="退出VR"
 	       align="top" y="24"
 	       autoalpha="true" alpha="0.0"
 	       onclick="webvr.exitVR();"
@@ -230,7 +230,7 @@
 
 	<layer name="webvr_setupbutton" keep="true" vr="true"
 	       style="webvr_button_style"
-	       html="VR Setup"
+	       html="VR设置"
 	       align="bottom" y="24"
 	       autoalpha="true" alpha="0.0"
 	       onclick="vr_setup()"

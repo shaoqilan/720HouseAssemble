@@ -1,9 +1,8 @@
 ﻿.diviframe {
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 100%;
-    padding-bottom: 53px;
     bottom: 50px;
+    top: 0px;
 }
 iframe {
     height: 100%;
