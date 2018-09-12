@@ -120,9 +120,9 @@
             <div class="submenu-body">
                 <div id="subtab1" class="weui-tab__bd-item">
                     <div id="maskHand" style="overflow:hidden;height: auto;">
-                        <div class="mask">
+                        <!-- <div class="mask">
                             <img src="Resources/images/img/QW/bg.png" />
-                        </div>
+                        </div> -->
                         <div id="quwei" style="overflow:hidden;" class="swiper-container">
                             <div class="swiper-wrapper">
                                 <div tagindex="1" class="swiper-slide swiper-slide-active">
@@ -221,8 +221,14 @@
                 $(this).attr("class", "selectqwend");
                 //切换
             });
+            var browser = $.photoBrowser({
+              items: [
+                "Resources/images/img/QW/bg.png"
+              ]
+            });
             $("#maskHand").on("click",function(e){
                 $(this).toggleClass("showMask");
+                browser.open();
             });
         });
     </script>

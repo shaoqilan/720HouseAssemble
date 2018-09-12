@@ -51,9 +51,9 @@
             </div>
             <div id="tab4" class="weui-tab__bd-item">
                 <div id="maskHand" style="overflow:hidden;height: auto;">
-                    <div class="mask">
+                   <!--  <div class="mask" id="imageBrowser">
                         <img src="Resources/images/img/QW/bg.png" />
-                    </div>
+                    </div> -->
                     <div id="quwei" style="overflow:hidden;" class="swiper-container swiper-container-quwei">
                         <div class="swiper-wrapper">
                             <div tagindex="0" class="swiper-slide">
@@ -141,9 +141,17 @@
                 $(this).attr("class", "selectqwend");
                 //切换
             });
+            var browser = $.photoBrowser({
+              items: [
+                "Resources/images/img/QW/bg.png"
+              ]
+            });
             $("#maskHand").on("click", function (e) {
                 $(this).toggleClass("showMask");
+                browser.open();
             });
+            
+            
         });
         function CutRoom(obj, url) {
             $(obj).parent().find("div").attr("class", "selectroom");

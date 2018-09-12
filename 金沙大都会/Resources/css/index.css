@@ -134,3 +134,6 @@ iframe {
 .mask>img{
     width:100%;margin-top:-50px;
 }
+.weui-photo-browser-modal{
+    z-index: 100;
+}

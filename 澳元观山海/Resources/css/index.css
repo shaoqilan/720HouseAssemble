@@ -185,3 +185,6 @@ iframe {
     overflow-y: auto;
     height: 100%;
 }
+.weui-photo-browser-modal{
+    z-index: 1000;
+}
