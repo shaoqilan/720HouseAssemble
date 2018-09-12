@@ -1,5 +1,11 @@
 ﻿<krpano version="1.19" title="D户型">
   <include url="skin/vtourskin.xml" />
+  <!--文字显示必须的-->
+  <style name="TopTagTextMenGroup" url="%SWFPATH%/plugins/textfield.swf" background="false" css="border-bottom: solid 1px #c2634f;border-radius:30px;color:#fff;display:block;padding:2px;padding-left:10px;padding-right: 10px;background-color: rgba(49, 44, 44, 0.83);" enabled="true" />
+  <!--标签显示的样式-->
+  <style name="TopTagTextLable" background="true" roundedge="12" backgroundalpha="0.6" backgroundcolor="0x000000" shadow="1" shadowrange="1" shadowcolor="0xff0000" fontsize="8" css="color:#fff;padding:2px;padding-left:10px;padding-right: 10px; " enabled="false" zoom="true" blendmode="layer" />
+  <!--标签的线-->
+  <style name="LableLine" background="true" backgroundcolor="0xFFFFFF" width="1" css="height: 50px;" enabled="false" ox="0" oy="40" zoom="true" />
   <!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
   <skin_settings maps="false" maps_type="google" maps_bing_api_key="" maps_google_api_key="" maps_zoombuttons="false" gyro="true" webvr="true" webvr_gyro_keeplookingdirection="false" webvr_prev_next_hotspots="true" littleplanetintro="false" title="true" thumbs="true" thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160" thumbs_opened="false" thumbs_text="false" thumbs_dragging="true" thumbs_onhoverscrolling="false" thumbs_scrollbuttons="false" thumbs_scrollindicator="false" thumbs_loop="false" tooltips_buttons="false" tooltips_thumbs="false" tooltips_hotspots="false" tooltips_mapspots="false" deeplinking="false" loadscene_flags="MERGE" loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)" loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)" loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)" loadingtext="加载中..." layout_width="100%" layout_maxwidth="814" controlbar_width="-24" controlbar_height="40" controlbar_offset="20" controlbar_offset_closed="-40" controlbar_overlap.no-fractionalscaling="10" controlbar_overlap.fractionalscaling="0" design_skin_images="vtourskin.png" design_bgcolor="0x000000" design_bgalpha="0" design_bgborder="0" design_bgroundedge="1" design_bgshadow="0 0 0 0x000000 0" design_thumbborder_bgborder="3 0xFFFFFF 1.0" design_thumbborder_padding="2" design_thumbborder_bgroundedge="0" design_text_css="color:#FFFFFF; font-family:Arial;" design_text_shadow="1" />
   <!--
@@ -143,6 +149,8 @@
       <cube url="panos/2F_1.tiles/vr/pano_%s.jpg" />
     </image>
     <hotspot name="spot1" url="skin/客厅.png" style="skin_hotspotstyle" ath="160.987" atv="36.845" linkedscene="scene_d_2f______" />
+    <hotspot name="spot10" group="jiaotong" type="text" style="TopTagTextLable" ath="-63.221" atv="13.535" html="储物间" />
+    <hotspot name="line10" group="jiaotong" type="text" style="LableLine" ath="-63.221" atv="13.535" />
   </scene>
   <scene name="scene_2F_2" title="主卧" onstart="" havevrimage="true" thumburl="panos/2F_2.tiles/thumb.jpg" lat="" lng="" heading="">
 

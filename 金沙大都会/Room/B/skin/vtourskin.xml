@@ -847,27 +847,27 @@
 
 
 	<action name="skin_hideskin">
-		callwith(layer[skin_scroll_window],   skin_calc_opened_closed() );
-		callwith(layer[skin_splitter_bottom], skin_calc_opened_closed() );
-		callwith(layer[skin_control_bar],     skin_calc_opened_closed() );
+    callwith(layer[skin_scroll_window],   skin_calc_opened_closed() );
+    callwith(layer[skin_splitter_bottom], skin_calc_opened_closed() );
+    callwith(layer[skin_control_bar],     skin_calc_opened_closed() );
 
-		if(layer[skin_map].state    != 'closed', skin_showmap(false);    wait(0.40); );
-		if(layer[skin_thumbs].state != 'closed', skin_showthumbs(false); wait(0.25); );
+    if(layer[skin_map].state    != 'closed', skin_showmap(false);    wait(0.40); );
+    if(layer[skin_thumbs].state != 'closed', skin_showthumbs(false); wait(0.25); );
 
-		set(hidetime, calc('%1' == 'instant' ? 0.0 : 0.5));
-		tween(layer[skin_scroll_window].y,   get(layer[skin_scroll_window  ].y_closed), get(hidetime));
-		tween(layer[skin_splitter_bottom].y, get(layer[skin_splitter_bottom].y_closed), get(hidetime));
-		tween(layer[skin_control_bar].y,     get(layer[skin_control_bar    ].y_closed), get(hidetime));
+    set(hidetime, calc('%1' == 'instant' ? 0.0 : 0.5));
+    tween(layer[skin_scroll_window].y,   get(layer[skin_scroll_window  ].y_closed), get(hidetime));
+    tween(layer[skin_splitter_bottom].y, get(layer[skin_splitter_bottom].y_closed), get(hidetime));
+    tween(layer[skin_control_bar].y,     get(layer[skin_control_bar    ].y_closed), get(hidetime));
 
-		tween(layer[skin_btn_prev_fs].x, 0, get(hidetime));
-		tween(layer[skin_btn_next_fs].x, 0, get(hidetime));
+    tween(layer[skin_btn_prev_fs].x, 0, get(hidetime));
+    tween(layer[skin_btn_next_fs].x, 0, get(hidetime));
 
-		if(layer[skin_logo], tween(layer[skin_logo].alpha, 0.0, 0.5, default, set(layer[skin_logo].visible,false)); );
+    if(layer[skin_logo], tween(layer[skin_logo].alpha, 0.0, 0.5, default, set(layer[skin_logo].visible,false)); );
 
-		stopdelayedcall(skin_btn_show_alpha);
-		set(layer[skin_btn_show].visible, true);
-		delayedcall(skin_btn_show_alpha, get(hidetime), tween(layer[skin_btn_show].alpha, 0.25, 0.25); );
-	</action>
+    stopdelayedcall(skin_btn_show_alpha);
+    set(layer[skin_btn_show].visible, true);
+    delayedcall(skin_btn_show_alpha, get(hidetime), tween(layer[skin_btn_show].alpha, 1.0, 1.0); );
+  </action>
 
 
 	<action name="skin_showskin">
