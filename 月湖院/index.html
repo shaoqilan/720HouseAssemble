@@ -69,27 +69,30 @@
             </div>
             <div id="tab4" class="weui-tab__bd-item">
                 <div id="maskHand" style="overflow:hidden;height: auto;">
-                   <!--  <div class="mask" id="imageBrowser">
-                        <img src="Resources/images/img/QW/bg.png" />
-                    </div> -->
+                    <div class="mask" id="imageBrowser">
+                        <img src="Resources/images/img/QW/底图.png" />
+                    </div>
                     <div id="quwei" style="overflow:hidden;" class="swiper-container swiper-container-quwei">
                         <div class="swiper-wrapper">
                             <div tagindex="0" class="swiper-slide">
-                                <img style="margin-top:-50px;" src="Resources/images/img/QW/bg.png" />
+                                <img style="margin-top:-50px;" src="Resources/images/img/QW/轨道交通.png" />
                             </div>
                             <div tagindex="1" class="swiper-slide">
-                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW1.png" />
+                                <img style="margin-top:-50px;" src="Resources/images/img/QW/交通配套.png" />
                             </div>
                             <div tagindex="2" class="swiper-slide">
-                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW2.png" />
+                                <img style="margin-top:-50px;" src="Resources/images/img/QW/教育配套.png" />
                             </div>
                             <div tagindex="3" class="swiper-slide">
-                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW3.png" />
+                                <img style="margin-top:-50px;" src="Resources/images/img/QW/休闲配套.png" />
+                            </div>
+                            <div tagindex="5" class="swiper-slide">
+                                <img style="margin-top:-50px;" src="Resources/images/img/QW/医疗配套.png" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div style="margin-top: -1px;width: 100%;position: relative;">
+                <div style="margin-top: -1px;width: 100%;position: relative;display:none;">
                     <div style="margin-right: 140px;">
                         <div style="text-align: center;padding-top:20px;">
                             <img style="width: 100px;" src="Resources/images/img/QW/项目区位@2x.png" />
@@ -100,7 +103,7 @@
                         </div>
                     </div>
                     <div style="width: 100px; position: absolute; right: 13px; top: 54px;">
-                        <div seltype="qw0" tagindex="1"  class="selectqwend" style="background-image:url('Resources/images/img/QW/all.png');"></div>
+                        <div seltype="qw0" tagindex="1" class="selectqwend" style="background-image:url('Resources/images/img/QW/all.png');"></div>
                         <div seltype="qw1" tagindex="2" class="selectqw" style="background-image:url('Resources/images/img/QW/地铁交通@2x.png');">
                         </div>
                         <div seltype="qw2" tagindex="3" class="selectqw" style="background-image:url('Resources/images/img/QW/交通路网@2x.png')">
@@ -160,16 +163,16 @@
                 //切换
             });
             var browser = $.photoBrowser({
-              items: [
-                "Resources/images/img/QW/bg.png"
-              ]
+                items: [
+                    "Resources/images/img/QW/bg.png"
+                ]
             });
             $("#maskHand").on("click", function (e) {
                 $(this).toggleClass("showMask");
                 browser.open();
             });
-            
-            
+
+
         });
         function CutRoom(obj, url) {
             $(obj).parent().find("div").attr("class", "selectroom");
