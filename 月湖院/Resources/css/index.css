@@ -72,6 +72,8 @@ iframe {
     width: 100%;
     
 }
+#quwei{
+}
 .swiper-container.swiper-container-quwei{
     background: url(../images/img/QW/bg.png) center -50px/100% no-repeat;
 }
@@ -105,9 +107,8 @@ iframe {
     margin-bottom: 16px;
 }
 .mask{
-    width:100%;position:absolute;z-index:-1;height:100%;overflow:hidden;
+    width:100%;
     overflow: auto;
-    display: none
 }
 .showMask .mask{
     z-index: 1000;
@@ -132,7 +133,7 @@ iframe {
     margin-top: 0;
 }
 .mask>img{
-    width:100%;margin-top:-50px;
+    width:100%
 }
 .weui-photo-browser-modal{
     z-index: 100;
