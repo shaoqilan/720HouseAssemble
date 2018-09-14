@@ -41,7 +41,7 @@
   </action>
   <!--场景信息-->
   <scene name="scene_p1" title="p1" onstart="SceneStart()" havevrimage="true" thumburl="panos/p1.tiles/thumb.jpg" lat="" lng="" heading="">
-    <view hlookat="-233.555" vlookat="29.207" fovtype="MFOV" fov="125.317" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <view hlookat="1.403" vlookat="38.877" fovtype="MFOV" fov="109.145" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
     <preview url="panos/p1.tiles/preview.jpg" />
     <image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
       <level tiledimagewidth="2624" tiledimageheight="2624">
