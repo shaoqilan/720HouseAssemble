@@ -68,6 +68,12 @@ iframe {
     background-position-y: -30px;
     background-size: 5300%;
 }
+.menvideo {
+    background-image: url(../images/img/menu.png);
+    background-position-x: -746px;
+    background-position-y: -30px;
+    background-size: 5300%;
+}
 .swiper-container {
     width: 100%;
     

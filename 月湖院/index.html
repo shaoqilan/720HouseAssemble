@@ -16,15 +16,18 @@
             /*background: linear-gradient(top,#182959,#090f22);*/
             position: relative;
         }
-        .selectqw{
+
+        .selectqw {
             height: .88rem;
             margin-bottom: 15px;
         }
-        .selectqwend{
+
+        .selectqwend {
             height: .88rem;
             margin-bottom: 15px;
         }
-        .mask{
+
+        .mask {
             position: absolute;
             z-index: -1;
         }
@@ -41,7 +44,7 @@
             </div>
             <div id="tab2" class="weui-tab__bd-item">
                 <div style="overflow:hidden;height:100%;">
-                    <img style="width:100%;position:absolute;z-index:-1;height:100%;" src="Resources/images/img/bg.png" />
+                    <!--<img style="width:100%;position:absolute;z-index:-1;height:100%;" src="Resources/images/img/bg.png" />-->
                     <div id="housetype" style="overflow:hidden;" class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -111,7 +114,8 @@
                      <div style="width: 90px; margin-right: 10px; margin-left: auto; margin-top: 15px;">
                         <div seltype="qw0" tagindex="1" class="selectqw" style="background-image:url('Resources/images/img/QW/A全部配套.png');">
                         </div>
-                        <div seltype="qw1" tagindex="2" class="selectqwend" style="background-image:url('Resources/images/img/QW/A轨道交通.png');"></div>
+                        <div seltype="qw1" tagindex="2" class="selectqwend" style="background-image:url('Resources/images/img/QW/A轨道交通.png');">
+                        </div>
                         <div seltype="qw2" tagindex="3" class="selectqw" style="background-image:url('Resources/images/img/QW/A交通配套.png');">
                         </div>
                         <div seltype="qw3" tagindex="4" class="selectqw" style="background-image:url('Resources/images/img/QW/A教育配套.png')">
@@ -122,7 +126,15 @@
                         </div>
                     </div>
                 </div>
-               
+
+            </div>
+            <div id="tab5" class="weui-tab__bd-item ">
+                <div onclick="PayVideo()" class="diviframe">
+                    <video id="vmp4" controls="controls" style="background-color: rgb(0, 0, 0); width:100%;height:100%;"  playsinline="true" webkit-playsinline="true" 
+2 x-webkit-airplay="true" x5-video-player-type="h5" x5-video-orientation="h5" 
+3 x5-video-player-fullscreen="true" preload="auto"  src="Resources/v.mp4"></video>
+
+                </div>
             </div>
         </div>
         <div class="weui-tabbar">
@@ -142,9 +154,12 @@
                 <div class="weui-tabbar__icon menzonebit"></div>
                 <p class="weui-tabbar__label">区位</p>
             </a>
+            <a href="#tab5" class="weui-tabbar__item">
+                <div class="weui-tabbar__icon menvideo"></div>
+                <p class="weui-tabbar__label">商业漫游</p>
+            </a>
         </div>
     </div>
-    
     <script src="Resources/jqweui/jquery-weui.min.js"></script>
     <script src="Resources/jqweui/swiper.min.js"></script>
     <script type="text/javascript">
@@ -181,8 +196,6 @@
             $("#quwei").on("click", function (e) {
                 browser.open();
             });
-
-
         });
         function CutRoom(obj, url) {
             $(obj).parent().find("div").attr("class", "selectroom");
@@ -190,5 +203,14 @@
             $("#room").attr("src", url);
         }
     </script>
+   <script type="text/javascript">
+       function PayVideo() {
+           if (document.getElementById("vmp4").paused) {
+               document.getElementById("vmp4").play();
+           } else {
+               document.getElementById("vmp4").pause();
+           }
+       }
+   </script>
 </body>
 </html>
