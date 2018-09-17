@@ -1,4 +1,4 @@
-﻿<krpano version="1.19" title="D户型">
+﻿<krpano version="1.19" title="户型2">
   <include url="skin/vtourskin.xml" />
   <!--文字显示必须的-->
   <style name="TopTagTextMenGroup" url="%SWFPATH%/plugins/textfield.swf" background="false" css="border-bottom: solid 1px #c2634f;border-radius:30px;color:#fff;display:block;padding:2px;padding-left:10px;padding-right: 10px;background-color: rgba(49, 44, 44, 0.83);" enabled="true" />
