@@ -35,8 +35,12 @@
             left: 0;
             top:0;
         }
-        .tab4-body .tab4-footer{
-            
+        .tab4-body .tab4-fixed-footer{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            display: flex;
+            width: 100%;
         }
         #quwei{
             height: 100%;
@@ -44,11 +48,13 @@
         .selectqw {
             height: .88rem;
             margin-bottom: 15px;
+            flex: 1;
         }
 
         .selectqwend {
             height: .88rem;
             margin-bottom: 15px;
+            flex: 1;
         }
 
         .mask {
@@ -162,27 +168,39 @@
                     <div class="tab4-header"></div>
                     <div id="quwei" class="swiper-container swiper-container-quwei">
                         <div class="swiper-wrapper">
-                            <div tagindex="0" class="swiper-slide swiper-zoom-container">
-                                <img src="Resources/images/imgBig/底图.jpg" />
+                            <div tagindex="0" class="swiper-slide">
+                                <div class="swiper-zoom-container">
+                                    <img src="Resources/images/imgBig/底图.jpg" />
+                                </div>
                             </div>
-                            <div tagindex="1" class="swiper-slide swiper-zoom-container">
-                                <img src="Resources/images/imgBig/轨道交通.png" />
+                            <div tagindex="1" class="swiper-slide">
+                                <div class="swiper-zoom-container">
+                                    <img src="Resources/images/imgBig/轨道交通.png" />
+                                </div>
                             </div>
-                            <div tagindex="2" class="swiper-slide swiper-zoom-container">
-                                <img src="Resources/images/imgBig/交通配套.png" />
+                            <div tagindex="2" class="swiper-slide">
+                                <div class="swiper-zoom-container">
+                                    <img src="Resources/images/imgBig/交通配套.png" />
+                                </div>
                             </div>
-                            <div tagindex="3" class="swiper-slide swiper-zoom-container">
-                                <img src="Resources/images/imgBig/教育配套.png" />
+                            <div tagindex="3" class="swiper-slide">
+                                <div class="swiper-zoom-container">
+                                    <img src="Resources/images/imgBig/教育配套.png" />
+                                </div>
                             </div>
-                            <div tagindex="4" class="swiper-slide swiper-zoom-container">
-                                <img src="Resources/images/imgBig/休闲配套.png" />
+                            <div tagindex="4" class="swiper-slide">
+                                <div class="swiper-zoom-container">
+                                    <img src="Resources/images/imgBig/休闲配套.png" />
+                                </div>
                             </div>
-                            <div tagindex="5" class="swiper-slide swiper-zoom-container">
-                                <img src="Resources/images/imgBig/医疗配套.png" />
+                            <div tagindex="5" class="swiper-slide">
+                                <div class="swiper-zoom-container">
+                                    <img src="Resources/images/imgBig/医疗配套.png" />
+                                </div>
                             </div>
                         </div>
                     </div>  
-                    <!-- <div class="tab4-fixed-footer">
+                    <div class="tab4-fixed-footer">
                         <div seltype="qw0" tagindex="1" class="selectqw" style="background-image:url('Resources/images/img/QW/A全部配套.png');">
                         </div>
                         <div seltype="qw1" tagindex="2" class="selectqwend" style="background-image:url('Resources/images/img/QW/A轨道交通.png');">
@@ -195,7 +213,7 @@
                         </div>
                         <div seltype="qw5" tagindex="6" class="selectqw" style="background-image:url('Resources/images/img/QW/A医疗配套.png')">
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <div id="tab5" class="weui-tab__bd-item ">
@@ -237,7 +255,7 @@
         </div>
     </div>
     <script src="Resources/jqweui/jquery-weui.min.js"></script>
-    <script src="Resources/jqweui/swiper.min.js"></script>
+    <script src="Resources/jqweui/swiper-3.4.2.min.js"></script>
     <script>
         (function () {
           function resize() {
@@ -245,8 +263,15 @@
             var html = document.getElementsByTagName('html')[0];
             var width = html.clientWidth;
             var height =  html.clientHeight;
-            var max = width > height ? width : height;
-            var min = width > height ? height : width;
+            var max,min;
+            if(width > height){
+                // 横屏
+                max = width;
+                min = height - 50;
+            }else{
+                max = height -50;
+                min = width;
+            }
             body.style.width = max + "px";
             body.style.height = min + "px";
           }
