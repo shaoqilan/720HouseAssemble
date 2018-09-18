@@ -81,7 +81,7 @@ iframe {
 #quwei{
 }
 .swiper-container.swiper-container-quwei{
-    background: url(../images/img/QW/bg.png) center -50px/100% no-repeat;
+    /*background: url(../images/img/QW/bg.png) center -50px/100% no-repeat;*/
 }
 
     .swiper-container img {
