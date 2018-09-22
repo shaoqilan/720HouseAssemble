@@ -15,6 +15,9 @@
             background: -webkit-linear-gradient(top,#182959,#090f22);
             background: linear-gradient(top,#182959,#090f22);
         }
+        #tab4 img{
+            margin-bottom: 50px;
+        }
     </style>
 </head>
 <body style="overflow: hidden;">
@@ -25,19 +28,9 @@
                     <iframe src="SandBoxie/index.html"></iframe>
                 </div>
             </div>
-            <div id="tab2" class="weui-tab__bd-item">
-                <div style="overflow:hidden;height:100%;">
-                    <img style="width:100%;position:absolute;z-index:-1;height:100%;" src="Resources/images/img/bg.png" />
-                    <div id="housetype" style="overflow:hidden;" class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="Resources/images/img/A1.png" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="Resources/images/img/A6.png" />
-                            </div>
-                        </div>
-                    </div>
+            <div id="tab2" style="height: 100%" class="weui-tab__bd-item">
+                <div style="height: 100%;overflow-y: auto">
+                    <img style="width: 100%;" src="Resources/images/img/XM/desc.jpg">
                 </div>
             </div>
             <div id="tab3" class="weui-tab__bd-item">
@@ -50,44 +43,28 @@
                 </div>
             </div>
             <div id="tab4" class="weui-tab__bd-item">
-                <div id="maskHand" style="overflow:hidden;height: auto;">
-                   <!--  <div class="mask" id="imageBrowser">
-                        <img src="Resources/images/img/QW/bg.png" />
-                    </div> -->
-                    <div id="quwei" style="overflow:hidden;" class="swiper-container swiper-container-quwei">
+                <div style="height:100%;">
+                    <img style="width:100%;position:absolute;z-index:-1;height:100%;" src="Resources/images/img/bg.png" />
+                    <div id="housetype" style="overflow:hidden;" class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div tagindex="0" class="swiper-slide">
-                                <img style="margin-top:-50px;" src="Resources/images/img/QW/bg.png" />
+                            <div class="swiper-slide">
+                                <img src="Resources/images/img/HX/HX1.jpg" />
                             </div>
-                            <div tagindex="1" class="swiper-slide">
-                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW1.png" />
+                            <div class="swiper-slide">
+                                <img src="Resources/images/img/HX/HX2.jpg" />
                             </div>
-                            <div tagindex="2" class="swiper-slide">
-                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW2.png" />
+                            <div class="swiper-slide">
+                                <img src="Resources/images/img/HX/HX3.jpg" />
                             </div>
-                            <div tagindex="3" class="swiper-slide">
-                                <img style="margin-top:-50px;" src="Resources/images/img/QW/QW3.png" />
+                            <div class="swiper-slide">
+                                <img src="Resources/images/img/HX/HX4.jpg" />
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="margin-top: -1px;width: 100%;position: relative;">
-                    <div style="margin-right: 140px;">
-                        <div style="text-align: center;padding-top:20px;">
-                            <img style="width: 100px;" src="Resources/images/img/QW/项目区位@2x.png" />
-                        </div>
-                        <div style="width: 95%;padding-left: 20px;font-size: 15px;color:#fff;padding-bottom: 73px;">
-                            <p style="text-indent: 20px">金沙大都汇位于金沙洲大桥西南侧，雄踞6号线沙贝地铁站上盖，出站即达。项目由央企保利和国企城投携手，打造广州西部金沙洲板块高端综合体，独享一线珠江江景，绿心公园、浔峰山与园林景观尽收眼底。</p>
-                            <p style="text-indent: 20px">项目占地7万方，总建筑面积约40万方，作为大都汇系列的第四座标杆项目，本案采用保利全新5.0生命周期系统，独具科学性的收纳空间、超100%以上的使用率，生活办公零秒切换。明火明厨、带入户花园、小区配备全龄段泳池，以及约5.5万方购物广场，满足一站式生活所需。</p>
-                        </div>
-                    </div>
-                    <div style="width: 100px; position: absolute; right: 13px; top: 54px;">
-                        <div seltype="qw0" tagindex="1"  class="selectqwend" style="background-image:url('Resources/images/img/QW/all.png');"></div>
-                        <div seltype="qw1" tagindex="2" class="selectqw" style="background-image:url('Resources/images/img/QW/地铁交通@2x.png');">
-                        </div>
-                        <div seltype="qw2" tagindex="3" class="selectqw" style="background-image:url('Resources/images/img/QW/交通路网@2x.png')">
-                        </div>
-                        <div seltype="qw3" tagindex="4" class="selectqw" style="background-image:url('Resources/images/img/QW/商业休闲@2x.png')">
+                            <div class="swiper-slide">
+                                <img src="Resources/images/img/HX/HX5.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Resources/images/img/HX/HX6.jpg" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,16 +76,16 @@
                 <p class="weui-tabbar__label">首页</p>
             </a>
             <a href="#tab2" class="weui-tabbar__item">
-                <div class="weui-tabbar__icon menhousetype"></div>
-                <p class="weui-tabbar__label">户型图</p>
+                <div class="weui-tabbar__icon menzonebit"></div>
+                <p class="weui-tabbar__label">项目简介</p>
             </a>
             <a href="#tab3" class="weui-tabbar__item">
                 <div class="weui-tabbar__icon menprototyperoom"></div>
                 <p class="weui-tabbar__label">样板间</p>
             </a>
             <a href="#tab4" class="weui-tabbar__item">
-                <div class="weui-tabbar__icon menzonebit"></div>
-                <p class="weui-tabbar__label">区位</p>
+                <div class="weui-tabbar__icon menhousetype"></div>
+                <p class="weui-tabbar__label">户型图</p>
             </a>
         </div>
     </div>
