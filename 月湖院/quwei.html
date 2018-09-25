@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>保利松湖18</title>
+    <link href="Resources/jqweui/weui.min.css" rel="stylesheet" />
+    <link href="Resources/jqweui/jquery-weui.min.css" rel="stylesheet">
+    <link href="Resources/jqweui/demos.css" rel="stylesheet" />
+    <link href="Resources/css/index.css" rel="stylesheet" />
+    <style>
+        #tab4 {
+            /*background-color: #3e3e3e;*/
+            /*background: -webkit-linear-gradient(top,#182959,#090f22);*/
+            /*background: linear-gradient(top,#182959,#090f22);*/
+            position: fixed;
+            left: 0;
+            top: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 50px;
+            background: #ecf7fd;
+        }
+        .tab4-body{
+            height: 100%;
+            width: 100%;
+            background: url(Resources/images/imgSlider/bg.png) top/100% no-repeat;
+            overflow: hidden;
+        }
+        .tab4-body .tab4-header{
+           /* width: 100%;
+            height: 40px;
+            background: url(Resources/images/imgBig/header.jpg) center/cover no-repeat;
+            position: absolute;
+            left: 0;
+            top:0;*/
+        }
+        .tab4-body .tab4-fixed-footer{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            display: flex;
+            width: 100%;
+        }
+        #quwei{
+            height: 100%;
+        }
+        .selectqw {
+            height: .88rem;
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .selectqwend {
+            height: .88rem;
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .mask {
+            position: absolute;
+            z-index: -1;
+        }
+        @media screen and (orientation:portrait) {
+          /*竖屏样式*/
+          #tab4 {
+            transform-origin: 0 0;
+            transform: rotateZ(90deg) translateY(-100%);
+          }
+        }
+        .swiper-container-quwei{
+            
+        }
+        .diviframe{
+            bottom: 0px;
+        }
+    </style>
+    <script src="Resources/jqweui/jquery-2.1.4.js"></script>
+    
+</head>
+<body style="overflow: hidden;">
+    <div class="weui-tab">
+        <div class="weui-tab__bd">
+           <div id="tab4" class="weui-tab__bd-item  weui-tab__bd-item--active">
+                <div class="tab4-body">
+                    <!-- <div class="tab4-header"></div> -->
+                    <div id="quwei" class="swiper-container swiper-container-quwei">
+                        <div class="swiper-wrapper">
+                            <div tagindex="0" class="swiper-slide" data-bigerurl="Resources/images/imgBig/全部配套.jpg?v=1">
+                                <img src="Resources/images/imgSlider/全部配套.png?v=1"/>
+                            </div>
+                            <div tagindex="1" class="swiper-slide" data-bigerurl="Resources/images/imgBig/交通配套.png?v=1">
+                                <img src="Resources/images/imgSlider/交通配套.png?v=1" />
+                            </div>
+                            <div tagindex="2" class="swiper-slide" data-bigerurl="Resources/images/imgBig/休闲配套.png?v=1">
+                                <img src="Resources/images/imgSlider/休闲配套.png?v=1" />
+                            </div>
+                            <div tagindex="3" class="swiper-slide" data-bigerurl="Resources/images/imgBig/医疗配套.png?v=1">
+                                <img src="Resources/images/imgSlider/医疗配套.png?v=1" />
+                            </div>
+                            <div tagindex="4" class="swiper-slide" data-bigerurl="Resources/images/imgBig/教育配套.png?v=1">
+                                <img src="Resources/images/imgSlider/教育配套.png?v=1" />
+                            </div>
+                            <div tagindex="5" class="swiper-slide" data-bigerurl="Resources/images/imgBig/轨道交通.png?v=1">
+                                <img src="Resources/images/imgSlider/轨道交通.png?v=1" />
+                            </div>
+                            <div tagindex="6" class="swiper-slide" data-bigerurl="Resources/images/imgBig/全部配套.jpg?v=1">
+                                <img src="Resources/images/imgSlider/项目简介.png?v=1" />
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="tab4-fixed-footer">
+                        <div seltype="qw0" tagindex="1" class="selectqw" style="background-image:url('Resources/images/img/QW/A全部配套.png');">
+                        </div>
+                        <div seltype="qw1" tagindex="2" class="selectqwend" style="background-image:url('Resources/images/img/QW/A交通配套.png');">
+                        </div>
+                        <div seltype="qw2" tagindex="3" class="selectqw" style="background-image:url('Resources/images/img/QW/A休闲配套.png');">
+                        </div>
+                        <div seltype="qw3" tagindex="4" class="selectqw" style="background-image:url('Resources/images/img/QW/A医疗配套.png')">
+                        </div>
+                        <div seltype="qw4" tagindex="5" class="selectqw" style="background-image:url('Resources/images/img/QW/A教育配套.png')">
+                        </div>
+                        <div seltype="qw5" tagindex="6" class="selectqw" style="background-image:url('Resources/images/img/QW/A轨道交通.png')">
+                        </div>
+                        <div seltype="qw6" tagindex="7" class="selectqw" style="background-image:url('Resources/images/img/QW/A项目简介.png')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Resources/jqweui/jquery-weui.min.js"></script>
+    <script src="Resources/jqweui/swiper.min.js"></script>
+    <script src="Resources/jqweui/swiper-3.4.2.min.js"></script>
+    <script>
+        (function () {
+          function resize() {
+            var body = document.getElementById('tab4');
+            var html = document.getElementsByTagName('html')[0];
+            var width = html.clientWidth;
+            var height =  html.clientHeight;
+            var max,min;
+            if(width > height){
+                // 横屏
+                max = width;
+                min = height;
+            }else{
+                max = height;
+                min = width;
+            }
+            body.style.width = max + "px";
+            body.style.height = min + "px";
+          }
+          resize();
+          window.addEventListener("resize", resize)
+        })();
+    </script>
+    <script type="text/javascript">
+        var quwei = new Swiper('#quwei', {
+                loop: true,
+                autoplay: false,
+                observer: true,
+                observeParents: true,
+                onTransitionEnd: function (swiper) {
+                    var index = $("#quwei .swiper-slide-active").attr("tagindex");
+                    $("div[seltype=\"qw" + index + "\"]").parent().find("div").attr("class", "selectqw");
+                    $("div[seltype=\"qw" + index + "\"]").attr("class", "selectqwend");
+                }
+            });
+            $("div[seltype]").click(function () {
+                var index = parseInt($(this).attr("tagindex"));
+                quwei.slideTo(index, 1000, false);
+                $(this).parent().find("div").attr("class", "selectqw");
+                $(this).attr("class", "selectqwend");
+                //切换
+            });
+             $("#quwei").find(".swiper-slide").each(function(idx,it){
+                var index = Number($(it).attr("tagindex"));
+                browsers[index] = $.photoBrowser({
+                    items:[$(it).data("bigerurl")]
+                })
+            });
+            $("#quwei").click(function(e){
+                var $target = $(e.target).parent(".swiper-slide");
+                if($target.length){
+                    var idx = $target.attr("tagindex");
+                    browsers[Number(idx)].open();
+                }
+            })
+    </script>
+</body>
+</html>

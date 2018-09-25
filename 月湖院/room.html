@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>保利松湖18</title>
+    <link href="Resources/jqweui/weui.min.css" rel="stylesheet" />
+    <link href="Resources/jqweui/jquery-weui.min.css" rel="stylesheet">
+    <link href="Resources/jqweui/demos.css" rel="stylesheet" />
+    <link href="Resources/css/index.css" rel="stylesheet" />
+    <style>
+        #tab4 {
+            /*background-color: #3e3e3e;*/
+            /*background: -webkit-linear-gradient(top,#182959,#090f22);*/
+            /*background: linear-gradient(top,#182959,#090f22);*/
+            position: fixed;
+            left: 0;
+            top: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 50px;
+            background: #ecf7fd;
+        }
+        .tab4-body{
+            height: 100%;
+            width: 100%;
+            background: url(Resources/images/imgSlider/bg.png) top/100% no-repeat;
+            overflow: hidden;
+        }
+        .tab4-body .tab4-header{
+           /* width: 100%;
+            height: 40px;
+            background: url(Resources/images/imgBig/header.jpg) center/cover no-repeat;
+            position: absolute;
+            left: 0;
+            top:0;*/
+        }
+        .tab4-body .tab4-fixed-footer{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            display: flex;
+            width: 100%;
+        }
+        #quwei{
+            height: 100%;
+        }
+        .selectqw {
+            height: .88rem;
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .selectqwend {
+            height: .88rem;
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .mask {
+            position: absolute;
+            z-index: -1;
+        }
+        @media screen and (orientation:portrait) {
+          /*竖屏样式*/
+          #tab4 {
+            transform-origin: 0 0;
+            transform: rotateZ(90deg) translateY(-100%);
+          }
+        }
+        .swiper-container-quwei{
+            
+        }
+        .diviframe{
+            bottom: 0;   
+        }
+    </style>
+    <script src="Resources/jqweui/jquery-2.1.4.js"></script>
+    
+</head>
+<body style="overflow: hidden;">
+    <div class="weui-tab">
+        <div class="weui-tab__bd">
+            <div id="tab3" class="weui-tab__bd-item  weui-tab__bd-item--active">
+                <div class="selectcon">
+                    <div onclick="CutRoom(this,'Room/B2/index.html')" class="selectroomend">户型1</div>
+                    <div onclick="CutRoom(this,'Room/D/index.html')" class="selectroom">户型2</div>
+                </div>
+                <div class="diviframe">
+                    <iframe id="room" src="Room/B2/index.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Resources/jqweui/jquery-weui.min.js"></script>
+    <script src="Resources/jqweui/swiper.min.js"></script>
+    <script src="Resources/jqweui/swiper-3.4.2.min.js"></script>
+    <script type="text/javascript">
+        function CutRoom(obj, url) {
+            $(obj).parent().find("div").attr("class", "selectroom");
+            $(obj).attr("class", "selectroomend");
+            $("#room").attr("src", url);
+        }
+    </script>
+</body>
+</html>
