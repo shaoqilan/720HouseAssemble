@@ -77,7 +77,7 @@
     <!--控制菜单进行隐藏-->
     <!--skin_hideskin('instant');-->
   </action>
-  <scene name="scene_p1" title="VR摄影室" onstart="" havevrimage="true" thumburl="panos/p1.tiles/thumb.jpg" lat="" lng="" heading="">
+  <scene name="scene_p1" title="负二楼影视厅" onstart="" havevrimage="true" thumburl="panos/p1.tiles/thumb.jpg" lat="" lng="" heading="">
 
     <view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
     <preview url="panos/p1.tiles/preview.jpg" />
@@ -97,7 +97,7 @@
 
   </scene>
 
-  <scene name="scene_p2" title="餐厅" onstart="" havevrimage="true" thumburl="panos/p2.tiles/thumb.jpg" lat="" lng="" heading="">
+  <scene name="scene_p2" title="负二楼娱乐健身室" onstart="" havevrimage="true" thumburl="panos/p2.tiles/thumb.jpg" lat="" lng="" heading="">
 
     <view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -118,7 +118,7 @@
 
   </scene>
 
-  <scene name="scene_p3" title="二楼客厅" onstart="" havevrimage="true" thumburl="panos/p3.tiles/thumb.jpg" lat="" lng="" heading="">
+  <scene name="scene_p3" title="负一楼老人房" onstart="" havevrimage="true" thumburl="panos/p3.tiles/thumb.jpg" lat="" lng="" heading="">
 
     <view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -139,7 +139,7 @@
 
   </scene>
 
-  <scene name="scene_p4" title="二楼卧室" onstart="" havevrimage="true" thumburl="panos/p4.tiles/thumb.jpg" lat="" lng="" heading="">
+  <scene name="scene_p4" title="负一楼书房" onstart="" havevrimage="true" thumburl="panos/p4.tiles/thumb.jpg" lat="" lng="" heading="">
 
     <view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -160,7 +160,7 @@
 
   </scene>
 
-  <scene name="scene_p5" title="二楼主卧室" onstart="" havevrimage="true" thumburl="panos/p5.tiles/thumb.jpg" lat="" lng="" heading="">
+  <scene name="scene_p5" title="负一楼小孩房" onstart="" havevrimage="true" thumburl="panos/p5.tiles/thumb.jpg" lat="" lng="" heading="">
 
     <view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -181,7 +181,7 @@
 
   </scene>
 
-  <scene name="scene_p6" title="画室" onstart="" havevrimage="true" thumburl="panos/p6.tiles/thumb.jpg" lat="" lng="" heading="">
+  <scene name="scene_p6" title="负一楼主人房" onstart="" havevrimage="true" thumburl="panos/p6.tiles/thumb.jpg" lat="" lng="" heading="">
 
     <view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -202,7 +202,7 @@
 
   </scene>
 
-  <scene name="scene_p7" title="客厅" onstart="" havevrimage="true" thumburl="panos/p7.tiles/thumb.jpg" lat="" lng="" heading="">
+  <scene name="scene_p7" title="一楼客厅" onstart="" havevrimage="true" thumburl="panos/p7.tiles/thumb.jpg" lat="" lng="" heading="">
 
     <view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -223,7 +223,7 @@
 
   </scene>
 
-  <scene name="scene_p8" title="摄影室" onstart="" havevrimage="true" thumburl="panos/p8.tiles/thumb.jpg" lat="" lng="" heading="">
+  <scene name="scene_p8" title="一楼餐厅" onstart="" havevrimage="true" thumburl="panos/p8.tiles/thumb.jpg" lat="" lng="" heading="">
 
     <view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -244,7 +244,7 @@
 
   </scene>
 
-  <scene name="scene_p9" title="书房" onstart="" havevrimage="true" thumburl="panos/p9.tiles/thumb.jpg" lat="" lng="" heading="">
+  <scene name="scene_p9" title="二楼客厅" onstart="" havevrimage="true" thumburl="panos/p9.tiles/thumb.jpg" lat="" lng="" heading="">
 
     <view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -265,7 +265,7 @@
 
   </scene>
 
-  <scene name="scene_p10" title="展厅" onstart="" havevrimage="true" thumburl="panos/p10.tiles/thumb.jpg" lat="" lng="" heading="">
+  <scene name="scene_p10" title="二楼卧室" onstart="" havevrimage="true" thumburl="panos/p10.tiles/thumb.jpg" lat="" lng="" heading="">
 
     <view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -282,6 +282,27 @@
 
     <image if="webvr.isenabled">
       <cube url="panos/p10.tiles/vr/pano_%s.jpg" />
+    </image>
+
+  </scene>
+
+  <scene name="scene_p11" title="二楼主卧室" onstart="" havevrimage="true" thumburl="panos/p11.tiles/thumb.jpg" lat="" lng="" heading="">
+
+    <view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+    <preview url="panos/p11.tiles/preview.jpg" />
+
+    <image type="CUBE" multires="true" tilesize="512" if="!webvr.isenabled">
+      <level tiledimagewidth="1280" tiledimageheight="1280">
+        <cube url="panos/p11.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="640" tiledimageheight="640">
+        <cube url="panos/p11.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+
+    <image if="webvr.isenabled">
+      <cube url="panos/p11.tiles/vr/pano_%s.jpg" />
     </image>
 
   </scene>
