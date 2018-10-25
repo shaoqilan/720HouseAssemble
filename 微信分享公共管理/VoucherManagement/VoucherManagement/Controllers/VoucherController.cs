@@ -16,7 +16,7 @@ namespace VoucherManagement.Controllers
         /// <param name="AppId"></param>
         /// <param name="Url"></param>
         /// <returns></returns>
-        public ActionResult GetWeChatJsSdk(string AppId,string Url)
+        public JsonResult GetWeChatJsSdk(string AppId,string Url)
         {
             //生成微信sdk的签名参数
             if (!string.IsNullOrEmpty(AppId))
@@ -68,6 +68,24 @@ namespace VoucherManagement.Controllers
             {
                 return VoucherManagement.ResponseTool.Create(201, "初始化失败,请传入AppId");
             }
+        }
+        /// <summary>
+        /// 获取微信全局AccessToken
+        /// </summary>
+        /// <param name="AppId"></param>
+        /// <returns></returns>
+        public JsonResult GetWeChatAccessToken(string AppId)
+        {
+            return ResponseTool.Create(new { AccessToken = WeChatDeploy.GetAccessToken(AppId) }, 200, "ok");
+        }
+        /// <summary>
+        /// 获取微信全局JsApiTicket
+        /// </summary>
+        /// <param name="AppId"></param>
+        /// <returns></returns>
+        public JsonResult GetWeChatJsApiTicket(string AppId)
+        {
+            return ResponseTool.Create(new { AccessToken = WeChatDeploy.GetJSAPITicket(AppId) }, 200, "ok");
         }
     }
 }
