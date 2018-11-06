@@ -5,8 +5,13 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
+using VoucherManagement.Tools;
+
 namespace VoucherManagement.Controllers
 {
+    /// <summary>
+    /// 微信统一注册凭证
+    /// </summary>
     [AllowCrossSiteJson]
     public class VoucherController : Controller
     {
@@ -57,16 +62,16 @@ namespace VoucherManagement.Controllers
                     WXModel.jsApiList.Add("showAllNonBaseMenuItem");
                     WXModel.jsApiList.Add("getLocation");
                     WXModel.jsApiList.Add("openLocation");
-                    return VoucherManagement.ResponseTool.Create(WXModel, 200, "ok");
+                    return ResponseTool.Create(WXModel, 200, "ok");
                 }
                 else
                 {
-                    return VoucherManagement.ResponseTool.Create(201, "初始化失败");
+                    return ResponseTool.Create(201, "初始化失败");
                 }
             }
             else
             {
-                return VoucherManagement.ResponseTool.Create(201, "初始化失败,请传入AppId");
+                return ResponseTool.Create(201, "初始化失败,请传入AppId");
             }
         }
         /// <summary>

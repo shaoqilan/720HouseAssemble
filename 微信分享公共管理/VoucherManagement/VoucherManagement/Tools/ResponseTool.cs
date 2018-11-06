@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VoucherManagement
+namespace VoucherManagement.Tools
 {
     /// <summary>
     /// 请求返回值管理

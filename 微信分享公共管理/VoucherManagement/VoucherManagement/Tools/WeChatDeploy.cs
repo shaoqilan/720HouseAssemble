@@ -8,7 +8,7 @@ using System.Web;
 using Senparc.Weixin;
 using Senparc.Weixin.MP.Containers;
 
-namespace VoucherManagement
+namespace VoucherManagement.Tools
 {
     public class WeChatDeploy
     {

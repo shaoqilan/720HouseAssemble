@@ -165,18 +165,29 @@
     <Compile Include="App_Start\AllowCrossSiteJsonAttribute.cs" />
     <Compile Include="App_Start\CustomJsonResult.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\ResponseTool.cs" />
+    <Compile Include="Tools\DESEncryptTool.cs" />
+    <Compile Include="Tools\ResponseTool.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\WeChatDeploy.cs" />
+    <Compile Include="Tools\StringTool.cs" />
+    <Compile Include="Tools\UserAuthorization.cs" />
+    <Compile Include="Tools\WeChatDeploy.cs" />
     <Compile Include="Controllers\VoucherController.cs" />
+    <Compile Include="Controllers\WeChatAuthorizationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\WeChatUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -184,12 +195,20 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="Views\web.config" />
+    <Content Include="Views\WeChatAuthorization\OAuthCallBack.cshtml" />
+    <Content Include="Views\WeChatAuthorization\SponsorOAuth.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
