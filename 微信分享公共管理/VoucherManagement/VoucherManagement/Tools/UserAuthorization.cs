@@ -43,6 +43,17 @@ namespace VoucherManagement.Tools
             return TokenResult.openid;
         }
         /// <summary>
+        /// 小程序获取用户登陆
+        /// </summary>
+        /// <param name="AppId"></param>
+        /// <param name="Code"></param>
+        /// <returns></returns>
+        public string GetWeChatLogin(string AppId, string Code)
+        {
+            string ApiUrl = "https://api.weixin.qq.com/sns/jscode2session?appid="+ AppId + "&secret="+ WeChatDeploy.GetDeploy()[AppId] + "&js_code="+ Code + "&grant_type=authorization_code";
+            return new System.Net.WebClient().DownloadString(ApiUrl);
+        }
+        /// <summary>
         /// 获取用户的信息
         /// </summary>
         /// <param name="Code"></param>
